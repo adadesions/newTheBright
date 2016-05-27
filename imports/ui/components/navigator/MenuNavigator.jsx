@@ -6,6 +6,14 @@ export default class MenuNavigator extends React.Component {
     $(".dropdown-button").dropdown();
   }
 
+  onClickRegister() {
+    FlowRouter.go('register');
+  }
+
+  onClickUploadTranscript() {
+    FlowRouter.go('paidform');
+  }
+
   render() {
     return(
       <div className="menu-navigator-component">
@@ -37,7 +45,8 @@ export default class MenuNavigator extends React.Component {
           <li><a href="">Coach Me Program</a></li>
         </ul>
         <ul id="register-list" className="dropdown-content">
-          <li><a href="">ขั้นตอนการสมัคร</a></li>
+          <li onClick={this.onClickRegister}><a href="">ขั้นตอนการสมัคร</a></li>
+          <li onClick={this.onClickUploadTranscript}><a href="">แจ้งการชำระเงิน</a></li>
           <li><a href="">ดาวน์โหลดใบชำระเงิน</a></li>
         </ul>
       </div>
