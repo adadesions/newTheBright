@@ -6,6 +6,14 @@ export default class ItemImgSlide extends React.Component {
     $(document).ready(function(){
       $('.slider').slider({full_width: true});
     });
+
+    $('.icon-previous').click(() => {
+      $('.slider').slider('prev');
+    });
+
+    $('.icon-next').click(() => {
+      $('.slider').slider('next');
+    });
   }
 
   render() {
