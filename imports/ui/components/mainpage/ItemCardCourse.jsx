@@ -3,7 +3,7 @@ import React from 'react';
 export default class ItemCardCourse extends React.Component {
   render() {
     return(
-      <div className="col s12 l3">
+      <div className="col s12 l3 item-card-course">
         <div className="card">
           <div className="card-image waves-effect waves-block waves-light">
             <img className="activator" src="images/navigator/logo.png"/>

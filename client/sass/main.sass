@@ -25,7 +25,18 @@
   background-color: #fff
   box-shadow: none
   color: #000
+  ul
+    // box-shadow: none
+    border-radius: 1em
+  li > a#mainPage
+    border-left: 1px dashed #bec2c6
   li
+    // border-image-slice: 15 15 15 15 fill
+    // border-image-width: 10px 10px 10px 10px
+    // border-image-outset: 0px 0px 0px 0px
+    // border-image-repeat: round round
+    // border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png")
+    border-right: 1px dashed #bec2c6
     a
       color: #000
       text-align: center
@@ -33,12 +44,14 @@
     a#whyTheBright
       width: 12em
     a#course
-      width: 16em
+      width: 15em
     a#register
-      width: 13em
+      width: 12.5em
 .menu-navigator-component
   ul.dropdown-content
     top: 4.5em !important
+    li
+      border: none
 
 // Footer
 .footer
@@ -59,6 +72,7 @@
     background-color: rgba(250,250,250,0.5)
     padding: 2em
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+    border-radius: 1em
   .head-form
     text-align: center
     font-size: 35px
@@ -76,6 +90,7 @@
     background-color: rgba(250,250,250,0.5)
     padding: 2em
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
+    border-radius: 1em
   .head-form
     text-align: center
     font-size: 35px
@@ -92,18 +107,26 @@
   .row.section-promote-course
     margin-bottom: 0 !important
   .section-promote-course
-    padding-top: 1em
-    padding-bottom: 0.5em
-    padding-right: 0.5em
-    padding-left: 0.5em
+    padding-top: 3em
+    padding-bottom: 3em
+    padding-right: 3em
+    padding-left: 3em
+    .item-card-course
+      padding-left: 1.5em
+      padding-right: 1.5em
+    .card
+      border-radius: 1em
+    .card-reveal
+      border-radius: 1em
   .section-menu-other
     padding-bottom: 2em
 .item-menu-other
   img
     width: 100%
+    border: 1px dashed #bec2c6
+    border-radius: 1em
 .col.item-menu-other
-  padding: 0
-  border: 1px dashed #d4d8dc
+  padding: 2em
 /////Responsive/////
 
 $breakpoint-tablet: 992px

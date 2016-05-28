@@ -6,6 +6,10 @@ export default class MenuNavigator extends React.Component {
     $(".dropdown-button").dropdown();
   }
 
+  onClickMainpage() {
+    FlowRouter.go('main');
+  }
+
   onClickRegister() {
     FlowRouter.go('register');
   }
@@ -20,7 +24,7 @@ export default class MenuNavigator extends React.Component {
         <nav className="menu-navigator">
           <div className="nav-wrapper">
             <ul>
-              <li><a id="mainPage" href="">หน้าแรก</a></li>
+              <li><a id="mainPage" onClick={this.onClickMainpage} href="">หน้าแรก</a></li>
               <li><a id="whyTheBright" className="dropdown-button" href="" data-activates="why-the-bright-list">Why TheBright<i className="material-icons right">arrow_drop_down</i></a></li>
               <li><a id="teamTheBright" className="dropdown-button" href="" data-activates="team-the-brgiht-list">ทีมเดอะไบร์ท<i className="material-icons right">arrow_drop_down</i></a></li>
               <li><a id="course" className="dropdown-button" href="" data-activates="course-list">คอร์สเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
