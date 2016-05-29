@@ -27,6 +27,9 @@
   background-color: #fff
   box-shadow: none
   color: #000
+  .button-collapse
+    i
+      color: #000
   ul
     // box-shadow: none
     border-radius: 1em
@@ -217,11 +220,181 @@ $breakpoint-desktop: 1680px
 
 /////mobile large/////
 @media only screen and (min-device-width: 351px) and (max-device-width: $breakpoint-mobile-large) and (-webkit-min-device-pixel-ratio: 2)
+  // Navigator
   .navigator
     position: fixed
     background-color: #82b1ff
-    height: 15em
+    height: 12em
     top: 0
+    z-index: 999
+    transition: height 0.5s
+    display: flex
+    flex-flow: row
+    .logo
+      height: 12em
+    .top-nav
+      padding-left: 4%
+      padding-right: 4%
+      height: 65%
+      img
+        margin-top: 3%
+    .bottom-nav
+      padding-left: 4%
+      padding-right: 4%
+      background-color: inherit
+      color: #000
+    .nav-logo
+      width: 26em
+      height: auto
+      transition: width 0.5s
+  .menu-navigator
+    background-color: inherit
+    box-shadow: none
+    color: #000
+    .nav-wrapper
+      display: flex
+      justify-content: flex-end
+      flex-flow: row-reverse
+    .button-collapse
+      height: 12em
+      display: flex
+      align-items: center
+      i
+        color: #fff
+        font-size: 8rem
+    ul
+      // box-shadow: none
+      border-radius: 1em
+    li > a#mainPage
+      border-left: 1px dashed #bec2c6
+    .desktop-list
+      li
+        visibility: hidden !important
+    ul#mobile-list
+      border-radius: 0em !important
+      li
+        a
+          width: 100%
+          padding-top: 1em
+          padding-bottom: 2em
+          font-size: 38px
+          text-align: left
+          display: flex
+          justify-content: flex-start
+          i
+            font-size: 5rem
+    ul#why-the-bright-list-mobile
+      top: 17em !important
+    ul#team-the-bright-list-mobile
+      top: 25em !important
+    ul#course-list-mobile
+      top: 33em !important
+    ul#register-list-mobile
+      top: 41em !important
+      li
+        a
+          cursor: pointer
+    li
+      // border-image-slice: 15 15 15 15 fill
+      // border-image-width: 10px 10px 10px 10px
+      // border-image-outset: 0px 0px 0px 0px
+      // border-image-repeat: round round
+      // border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png")
+      border-right: 1px dashed #bec2c6
+      a
+        color: #000
+        text-align: center
+        font-weight: bold
+        font-size: 15px
+        transition: fontsize 0.5s
+      a#whyTheBright
+        width: 14em
+      a#course
+        width: 14em
+      a#register
+        width: 14em
+  .menu-navigator-component
+    height: 4.3em
+    transition: height 0.5s
+    ul.dropdown-content
+      top: 4.5em !important
+      li
+        border: none
+  // Navigator On scroll
+  .navigator-on-scroll
+    position: fixed !important
+    background-color: #82b1ff !important
+    height: 12em !important
+    top: 0 !important
+    z-index: 999 !important
+    transition: height 0.5s !important
+    display: flex !important
+    flex-flow: row !important
+    .logo
+      height: 12em !important
+    .top-nav
+      padding-left: 4% !important
+      padding-right: 4% !important
+      height: 65% !important
+      img
+        margin-top: 3% !important
+    .bottom-nav
+      padding-left: 4% !important
+      padding-right: 4% !important
+      background-color: inherit !important
+      color: #000 !important
+      box-shadow: none !important
+    .nav-logo
+      width: 26em !important
+      height: auto !important
+      transition: width 0.5s !important
+  .menu-navigator-on-scroll
+    background-color: inherit !important
+    box-shadow: none !important
+    color: #000 !important
+    .nav-wrapper
+      display: flex !important
+      justify-content: flex-end !important
+      flex-flow: row-reverse !important
+    .button-collapse
+      height: 12em !important
+      display: flex !important
+      align-items: center !important
+      i
+        color: #fff !important
+        font-size: 8rem !important
+    ul
+      // box-shadow: none
+      border-radius: 1em !important
+    li > a#mainPage
+      border-left: 1px dashed #bec2c6 !important
+    li
+      // border-image-slice: 15 15 15 15 fill
+      // border-image-width: 10px 10px 10px 10px
+      // border-image-outset: 0px 0px 0px 0px
+      // border-image-repeat: round round
+      // border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png")
+      border-right: 1px dashed #bec2c6 !important
+      visibility: hidden !important
+      a
+        color: #000 !important
+        text-align: center !important
+        font-weight: bold !important
+        font-size: 15px !important
+        transition: fontsize 0.5s !important
+      a#whyTheBright
+        width: 13em !important
+      a#course
+        width: 15em !important
+      a#register
+        width: 12.5em !important
+  .menu-navigator-component
+    height: 4.3em !important
+    transition: height 0.5s !important
+    ul.dropdown-content
+      top: 4.5em !important !important
+      li
+        border: none !important
 
 /////mobile small/////
 @media only screen and (min-device-width: 100px) and (max-device-width: $breakpoint-mobile-mini)
