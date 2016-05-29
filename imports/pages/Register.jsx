@@ -34,7 +34,7 @@ export default class Register extends React.Component {
               </select>
               <label>คอร์สเรียน</label>
             </div>
-            <div className="input-field col s6 l2">
+            <div className="input-field col s4 l2">
               <select defaultValue="0">
                 <option value="0" disabled>Choose</option>
                 <option value="m">นาย</option>
@@ -42,7 +42,7 @@ export default class Register extends React.Component {
               </select>
               <label>คำนำหน้า</label>
             </div>
-            <div className="input-field col s6 l6">
+            <div className="input-field col s8 l6">
               <input id="name" type="text" className="validate"/>
               <label for="name">ชื่อ-นามสกุล</label>
             </div>
@@ -105,7 +105,7 @@ export default class Register extends React.Component {
             <div className="input-field col s12 l12">
               <div className="col s0 l4"><br/></div>
               <div className="col s12 l4 section-button">
-                <a className="waves-effect waves-light btn green">ลงทะเบียนเรียน</a>
+                <a className="waves-effect waves-light btn green btn-signup">ลงทะเบียนเรียน</a>
               </div>
               <div className="col s0 l4"><br/></div>
             </div>

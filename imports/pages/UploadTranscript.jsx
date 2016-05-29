@@ -53,7 +53,7 @@ export default class UploadTranscript extends React.Component {
               <label for="money-number">จำนวนเงิน</label>
             </div>
             <div className="file-field input-field col s12 l6">
-              <div className="btn">
+              <div className="btn btn-upload-file">
                 <span>File</span>
                 <input type="file"/>
               </div>
@@ -61,12 +61,12 @@ export default class UploadTranscript extends React.Component {
                 <input className="file-path validate" placeholder="สลิปธนาคาร" type="text"/>
               </div>
             </div>
-            <div className="input-field col l12">
-              <div className="col s4 l4"><br/></div>
-              <div className="col s4 l4 section-button">
-                <a className="waves-effect waves-light btn green">แจ้งชำระเงิน</a>
+            <div className="input-field col s12 l12">
+              <div className="col s0 l4"><br/></div>
+              <div className="col s12 l4 section-button">
+                <a className="waves-effect waves-light btn green btn-upload-transcription">แจ้งชำระเงิน</a>
               </div>
-              <div className="col s4 l4"><br/></div>
+              <div className="col s0 l4"><br/></div>
             </div>
           </div>
 

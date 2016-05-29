@@ -127,6 +127,7 @@
     color: #414141
     margin-bottom: 1.5em
 .section-button
+  margin-top: 1em
   display: flex
   justify-content: center
 
@@ -272,17 +273,23 @@ $breakpoint-desktop: 1680px
         visibility: hidden !important
     ul#mobile-list
       border-radius: 0em !important
+      overflow-y: auto
       li
-        a
+        a.button-left
+          width: 100%
+          padding-top: 0.5em
+          padding-bottom: 1.5em
+          font-size: 36px
+          display: flex
+          justify-content: flex-start
+        a.button-right
           width: 100%
           padding-top: 1em
           padding-bottom: 2em
-          font-size: 38px
-          text-align: left
+          font-size: 26px
+          padding-left: 2em
           display: flex
           justify-content: flex-start
-          i
-            font-size: 5rem
     ul#why-the-bright-list-mobile
       top: 17em !important
     ul#team-the-bright-list-mobile
@@ -291,9 +298,6 @@ $breakpoint-desktop: 1680px
       top: 33em !important
     ul#register-list-mobile
       top: 41em !important
-      li
-        a
-          cursor: pointer
     li
       // border-image-slice: 15 15 15 15 fill
       // border-image-width: 10px 10px 10px 10px
@@ -395,7 +399,229 @@ $breakpoint-desktop: 1680px
       top: 4.5em !important !important
       li
         border: none !important
+  // Mainpage
+  .mainpage
+    margin-top: 12em
+    .section-slide
+      padding-top: 0.1em
+      padding-bottom: 1em
+      display: flex
+      justify-content: center
+      .slide-container
+        width: 100%
+      .slides
+        height: 40rem !important
+      .slider
+        margin-left: -16%
+        margin-top: 0.5%
+        width: 132%
+        height: 45rem !important
+        border-radius: 1em
+        box-shadow: -10px 0px 150px 3px #aaaaaa,10px 0px 150px 3px #bec2c6
+        ul
+          border-radius: 1em
+        li.list-img-slide
+          -webkit-border-top-left-radius: 1em
+          -webkit-border-top-right-radius: 1em
+          -moz-border-radius-topleft: 1em
+          -moz-border-radius-topright: 1em
+          border-top-left-radius: 1em
+          border-top-right-radius: 1em
+      .indicators
+        bottom: 3%
+      .icon-next
+        display: flex
+        align-items: center
+        height: 31em !important
+        cursor: pointer
+        visibility: hidden
+        img
+          width: 6.4em
+          height: auto
+          opacity: 0.5
+      .icon-previous
+        display: flex
+        align-items: center
+        height: 31em !important
+        cursor: pointer
+        visibility: hidden
+        img
+          width: 6.4em
+          height: auto
+          opacity: 0.5
+  .section-poster
+    img
+      height: 40em
+  // Footer
+  .footer
+    background: #b2ff59
+    height: 18em
+    display: flex
+    align-items: center
+    padding-left: 8%
+    padding-right: 8%
+    img
+      width: 25em
+      height: auto
+  // Register page
+  .register-page
+    .head-form
+      text-align: center
+      font-size: 60px
+      font-weight: bold
+      color: #414141
+      margin-top: 1em
+    label
+      font-size: 50px
+    label.active
+      transform: translateY(-30%)
+      font-size: 40px
+    input
+      font-size: 50px
+      margin-top: 1.5em
+      height: 1em
+    textarea
+      font-size: 50px
+      margin-top: 1.5em
+    .select-wrapper
+      font-size: 50px
+      margin-top: 1.5em
+      span
+        top: -30%
+        font-size: 0.6em
+      input.select-dropdown
+        font-size: 40px
+        height: 1.26em
+      ul
+        li
+          span
+            font-size: 30px
+    textarea.materialize-textarea:focus
+      border-bottom: 1px solid #43609C !important
+    textarea.materialize-textarea:focus + label
+      color: #43609C !important
+    input[type=text]:focus
+      border-bottom: 1px solid #43609C !important
+    input[type=text]:focus + label
+      color: #43609C !important
+    input[type=password]:focus
+      border-bottom: 1px solid #43609C !important
+    input[type=password]:focus + label
+      color: #43609C !important
+    input[type=email]:focus
+      border-bottom: 1px solid #43609C !important
+    input[type=email]:focus + label
+      color: #43609C !important
+  .btn-signup
+    height: 2.5em
+    font-size: 40px
+    line-height: 2.5em
+  .picker__box
+    height: 75rem
+    width: 45rem
+    margin-left: -55%
+    font-size: 50px
+    .picker__weekday-display
+      font-size: 50px
+    .picker__month-display
+      font-size: 50px
+    .picker__day-display
+      font-size: 50px
+    .picker__year-display
+      font-size: 50px
+    th
+      font-size: 40px
+    .picker__day
+      font-size: 40px
+    .btn-flat
+      font-size: 40px
+    .picker__calendar-container
+      margin-top: 2rem
+    .picker__footer
+      margin-top: 7rem
 
+  // Upload transcript page
+  .upload-transcript-page
+    .head-form
+      text-align: center
+      font-size: 60px
+      font-weight: bold
+      color: #414141
+      margin-top: 1em
+    label
+      font-size: 50px
+    label.active
+      transform: translateY(-30%)
+      font-size: 40px
+    input
+      font-size: 50px
+      margin-top: 1.5em
+      height: 1em
+    textarea
+      font-size: 50px
+      margin-top: 1.5em
+    .select-wrapper
+      font-size: 50px
+      margin-top: 1.5em
+      span
+        top: -30%
+        font-size: 0.6em
+      input.select-dropdown
+        font-size: 40px
+        height: 1.26em
+      ul
+        li
+          span
+            font-size: 30px
+    textarea.materialize-textarea:focus
+      border-bottom: 1px solid #43609C !important
+    textarea.materialize-textarea:focus + label
+      color: #43609C !important
+    input[type=text]:focus
+      border-bottom: 1px solid #43609C !important
+    input[type=text]:focus + label
+      color: #43609C !important
+    input[type=password]:focus
+      border-bottom: 1px solid #43609C !important
+    input[type=password]:focus + label
+      color: #43609C !important
+    input[type=email]:focus
+      border-bottom: 1px solid #43609C !important
+    input[type=email]:focus + label
+      color: #43609C !important
+  .btn-upload-transcription
+    height: 2.5em
+    font-size: 40px
+    line-height: 2.5em
+  .btn-upload-file
+    margin-right: 1rem
+    width: 12rem
+    height: 9rem !important
+    font-size: 40px
+    line-height: 9rem !important
+  .picker__box
+    height: 75rem
+    width: 45rem
+    margin-left: -55%
+    font-size: 50px
+    .picker__weekday-display
+      font-size: 50px
+    .picker__month-display
+      font-size: 50px
+    .picker__day-display
+      font-size: 50px
+    .picker__year-display
+      font-size: 50px
+    th
+      font-size: 40px
+    .picker__day
+      font-size: 40px
+    .btn-flat
+      font-size: 40px
+    .picker__calendar-container
+      margin-top: 2rem
+    .picker__footer
+      margin-top: 7rem
 /////mobile small/////
 @media only screen and (min-device-width: 100px) and (max-device-width: $breakpoint-mobile-mini)
   .navigator
