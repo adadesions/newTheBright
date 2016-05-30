@@ -1,5 +1,9 @@
 import React from 'react';
 
+const styleBoxAddFriend = {
+  width: '60%',
+}
+
 export default class Register extends React.Component {
 
   componentDidMount() {
@@ -14,6 +18,23 @@ export default class Register extends React.Component {
 
     $(document).ready(function(){
       $('.parallax').parallax();
+    });
+
+    var divTarget = $('#formFriend');
+    var i = $('#formFriend div').size() + 1;
+
+    $('.btn-add-friend').on('click', function() {
+            $('<div className="input-field col s8 l8"><span>'+ i +'</span><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
+            i++;
+            return false;
+    });
+
+    $('#remScnt').on('click', function() {
+            if( i > 2 ) {
+                    $(this).parents('p').remove();
+                    i--;
+            }
+            return false;
     });
   }
 
@@ -105,6 +126,17 @@ export default class Register extends React.Component {
             <div className="input-field col s12 l6">
               <input id="parents-tel" type="text" className="validate"/>
               <label for="parents-tel">เบอร์โทรผู้ปกครอง</label>
+            </div>
+            <div className="input-field col s12 l12">
+              <div className="col s6 l6 friend">
+                <span>มีเพื่อนมาเรียนด้วย</span>
+              </div>
+              <div className="col s6 l6 friend-button ">
+                <a className="waves-effect waves-light btn green btn-add-friend">+ เพิ่มเพื่อน</a>
+              </div>
+            </div>
+            <div style={styleBoxAddFriend} id="formFriend" className="row">
+
             </div>
             <div className="input-field col s12 l12">
               <div className="col s0 l4"><br/></div>
