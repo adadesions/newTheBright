@@ -10,7 +10,9 @@ export default class MainPage extends React.Component {
 
   componentDidMount() {
     $(document).ready(function(){
-      $('.parallax').parallax();
+      if(screen.width > 1000){
+        $('.parallax').parallax();
+      }
     });
   }
 
@@ -18,8 +20,8 @@ export default class MainPage extends React.Component {
     return(
       <div>
         <div className="mainpage">
-          <div>
-            <div className="parallax"><img src="images/mainpage/bg.png"/></div>
+          <div className="col s12 l12 group-parallax">
+            <div className="parallax"><img src="/images/mainpage/bg.png"/></div>
             <div className="row section-slide">
               <div className="col s0 l1 icon-previous"><img src="/images/mainpage/slide/previous.png"/></div>
               <div className="col s12 l10 slide-container">
@@ -56,7 +58,7 @@ export default class MainPage extends React.Component {
             <ItemPoster />
           </div>
           <div className="row section-menu-other parallax-container">
-            <div className="parallax"><img src="images/mainpage/bg2.png"/></div>
+            <div className="parallax"><img src="/images/mainpage/bg2.png"/></div>
             <MenuOther />
           </div>
         </div>

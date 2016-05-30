@@ -20,7 +20,7 @@ export default class Register extends React.Component {
   render() {
     return(
       <div className="register-page">
-        <div className="row">
+        <div className="row space">
           <div className="col s12 l12"><br/></div>
         </div>
 
@@ -118,7 +118,7 @@ export default class Register extends React.Component {
           <div className="col s1 l2"><br/></div>
         </div>
 
-        <div className="row">
+        <div className="row space">
           <div className="col s12 l12"><br/></div>
         </div>
       </div>
