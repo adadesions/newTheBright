@@ -120,13 +120,12 @@
 .register-page
   background: url('/images/mainpage/bg3.jpg')
   background-size: cover
-  margin-top: 12em
   label
     color: #000
   .form-section
     background-color: rgba(255,255,255,0.8)
     padding: 2em
-    margin-top: 1em
+    margin-top: 13em
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
     border-radius: 1em
   .head-form
@@ -144,13 +143,12 @@
 .upload-transcript-page
   background: url('/images/mainpage/bg3.jpg')
   background-size: cover
-  margin-top: 12em
   label
     color: #000
   .form-section
     background-color: rgba(255,255,255,0.8)
     padding: 2em
-    margin-top: 1em
+    margin-top: 13em
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
     border-radius: 1em
   .head-form
@@ -162,8 +160,8 @@
 
 // Mainpage
 .mainpage
-  margin-top: 12em
   .section-slide
+    padding-top: 12em !important
     padding-top: 0.1em
     padding-bottom: 1em
     display: flex
@@ -208,6 +206,9 @@
         opacity: 0.5
   .row.section-promote-course
     margin-bottom: 0 !important
+  .slide-and-promote.parallax-container
+    height: 100%
+    margin-bottom: 0
   .section-promote-course
     padding-top: 3em
     padding-bottom: 3em
@@ -219,6 +220,16 @@
     .card
       background: rgba(255,255,255,0.9)
       border-radius: 1em
+      span
+        font-size: 18px
+      a
+        font-size: 20px
+        font-weight: bold
+    .card-content
+      display: flex
+      justify-content: center
+      div
+        text-align: center
     .card-image
       padding: 0.3em
       border-bottom: 1px solid #cccccc
@@ -234,20 +245,23 @@
     border-radius: 1em
 .col.item-menu-other
   padding: 2em
+.list-img-slide
+  img
+    width: 1050px
+    height: 400px
 /////Responsive/////
 
-$breakpoint-tablet: 992px
 $breakpoint-mobile-mini: 350px
 $breakpoint-mobile-large: 1000px
 $breakpoint-labtop: 1367px
 $breakpoint-desktop: 1680px
 
 /////mobile large/////
-@media only screen and (min-device-width: 351px) and (max-device-width: $breakpoint-mobile-large) and (-webkit-min-device-pixel-ratio: 2)
-  // Navigator
+@media only screen and (min-device-width: 351px) and (max-device-width: $breakpoint-mobile-large)
   .navigator
     position: fixed
-    background-color: #82b1ff
+    background: url('/images/navigator/bg.png') no-repeat fixed
+    background-size: cover
     height: 12em
     top: 0
     z-index: 999
@@ -265,7 +279,7 @@ $breakpoint-desktop: 1680px
     .bottom-nav
       padding-left: 4%
       padding-right: 4%
-      background-color: inherit
+      background-color: rgba(255,255,255,0)
       color: #000
     .nav-logo
       width: 26em
@@ -350,7 +364,8 @@ $breakpoint-desktop: 1680px
   // Navigator On scroll
   .navigator-on-scroll
     position: fixed !important
-    background-color: #82b1ff !important
+    background: url('/images/navigator/bg.png') no-repeat fixed !important
+    background-size: cover !important
     height: 12em !important
     top: 0 !important
     z-index: 999 !important
@@ -425,14 +440,20 @@ $breakpoint-desktop: 1680px
   // Mainpage
   .parallax
     display: none
-  .group-parallax
-    background: url('/images/mainpage/bg.png')
-    background-size: cover
+  .section-promote-course
+    .card
+      background: rgba(255,255,255,0.9)
+      border-radius: 1em
+      span
+        font-size: 33px !important
+      a
+        font-size: 35px !important
   .section-menu-other
-    background: url('/images/mainpage/bg2.png')
+    background: url('/images/mainpage/bg-pl2.jpg')
     background-size: cover
   .mainpage
-    margin-top: 12em
+    background: url('/images/mainpage/bg-pl.jpg')
+    background-size: cover
     .section-slide
       padding-top: 0.1em
       padding-bottom: 1em
@@ -485,7 +506,8 @@ $breakpoint-desktop: 1680px
       height: 40em
   // Footer
   .footer
-    background: #b2ff59
+    background: url('/images/footer/footer-bg.jpg')
+    background-size: cover
     height: 18em
     display: flex
     align-items: center
@@ -653,6 +675,7 @@ $breakpoint-desktop: 1680px
       margin-top: 2rem
     .picker__footer
       margin-top: 7rem
+
 /////mobile small/////
 @media only screen and (min-device-width: 100px) and (max-device-width: $breakpoint-mobile-mini)
   .navigator

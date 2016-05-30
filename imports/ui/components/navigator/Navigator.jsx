@@ -23,7 +23,7 @@ export default class Navigator extends React.Component {
     return(
       <nav className="navigator">
         <div className="top-nav">
-          <a className="logo" href=""><img className="nav-logo" src="/images/navigator/logo.png"/></a>
+          <a className="logo" href="/"><img className="nav-logo" src="/images/navigator/logo.png"/></a>
         </div>
         <div className="bottom-nav">
           <MenuNavigator />
