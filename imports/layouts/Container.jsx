@@ -7,7 +7,7 @@ import Footer from '../ui/components/footer/Footer.jsx';
 export default class Container extends React.Component {
   render() {
     return(
-      <div>
+      <div className="container-layout">
         <Navigator />
         {this.props.content}
         <Footer />
