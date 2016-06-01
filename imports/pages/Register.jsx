@@ -24,7 +24,7 @@ export default class Register extends React.Component {
     var i = $('#formFriend div').size() + 1;
 
     $('.btn-add-friend').on('click', function() {
-            $('<div className="input-field col s8 l8"><span>'+ i +'</span><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
+            $('<div className="input-field col s8 l8"><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
             i++;
             return false;
     });

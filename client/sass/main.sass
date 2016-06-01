@@ -8,43 +8,54 @@
   height: 12em
   top: 0
   z-index: 999
-  transition: height 0.5s
+  transition: height 0.4s
   .logo
     height: 12em
+  .top-nav-landing
+    display: flex
+    justify-content: space-between
+    padding-left: 8% !important
+    padding-right: 4% !important
+    height: 65% !important
+    img
+      margin-top: 3.5% !important
+    img.nav-brochrue-landing
+      margin-top: -12.5% !important
   .top-nav
-    padding-left: 8%
-    padding-right: 8%
+    padding-left: 6%
+    padding-right: 6%
     height: 65%
     img
       margin-top: 1%
   .bottom-nav
-    padding-left: 8%
-    padding-right: 8%
+    padding-left: 6%
+    padding-right: 6%
     background-color: #fff
     color: #000
   .nav-logo
     width: 14em
     height: auto
     transition: width 0.5s
+  .nav-logo-landing
+    width: 25em
+    height: auto
+    transition: width 0.5s
+  .nav-brochrue-landing
+    width: 25em
+    height: auto
+    transition: width 0.5s
 .menu-navigator
   background-color: #fff
   box-shadow: none
   color: #000
+  transition: height 0.2s
   .button-collapse
     i
       color: #000
   ul
     // box-shadow: none
     border-radius: 1em
-  li > a#mainPage
-    border-left: 1px dashed #bec2c6
   li
-    // border-image-slice: 15 15 15 15 fill
-    // border-image-width: 10px 10px 10px 10px
-    // border-image-outset: 0px 0px 0px 0px
-    // border-image-repeat: round round
-    // border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png")
-    border-right: 1px dashed #bec2c6
     a
       color: #000
       text-align: center
@@ -52,14 +63,14 @@
       font-size: 15px
       transition: fontsize 0.5s
     a#whyTheBright
-      width: 13em
+      width: 14em
     a#course
       width: 15em
     a#register
-      width: 12.5em
+      width: 13em
 .menu-navigator-component
   height: 4.3em
-  transition: height 0.5s
+  transition: height 0.4s
   ul.dropdown-content
     top: 4.5em !important
     li
@@ -71,8 +82,19 @@
   height: 6em
   top: 0
   z-index: 999
+  transition: height 0.4s
   .logo
     height: 12em !important
+  .top-nav-landing
+    display: flex
+    justify-content: space-between
+    padding-left: 8% !important
+    padding-right: 4% !important
+    height: 65% !important
+    img
+      margin-top: 1.5% !important
+    img.nav-brochrue-landing
+      margin-top: -12.5% !important
   .top-nav
     padding-left: 8% !important
     padding-right: 8% !important
@@ -88,12 +110,23 @@
   .nav-logo
     width: 8.7em !important
     height: auto !important
+    transition: width 0.5s
+  .nav-logo-landing
+    width: 13.7em !important
+    height: auto !important
+    transition: width 0.5s
+  .nav-brochrue-landing
+    width: 13.7em !important
+    height: auto !important
+    transition: width 0.5s
 .menu-navigator-component-on-scroll
   height: 2.5em !important
+  transition: height 0.2s
   ul.dropdown-content
     top: 2.7em !important
   .menu-navigator
     height: 2.5em !important
+    transition: height 0.2s
     li
       height: 2.5em !important
       margin-right: 0.7em !important
@@ -115,6 +148,88 @@
   img
     width: 20em
     height: auto
+
+// Landing page
+.landing-page
+  .section-slide
+    padding-top: 12em !important
+    padding-top: 0.1em
+    padding-bottom: 1em
+    display: flex
+    justify-content: center
+    .slider
+      background: rgba(255,255,255,0.6)
+      margin-top: 0.5%
+      height: 32em !important
+      border-radius: 1em
+      ul
+        border-radius: 1em
+      li.list-img-slide
+        -webkit-border-top-left-radius: 1em
+        -webkit-border-top-right-radius: 1em
+        -moz-border-radius-topleft: 1em
+        -moz-border-radius-topright: 1em
+        border-top-left-radius: 1em
+        border-top-right-radius: 1em
+    .indicators
+      bottom: 5%
+      li
+        background: #fff
+    .icon-next
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 32em !important
+      cursor: pointer
+      img
+        width: 6.4em
+        height: auto
+        opacity: 0.5
+    .icon-previous
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 32em !important
+      cursor: pointer
+      img
+        width: 6.4em
+        height: auto
+        opacity: 0.5
+  .slide-landing.parallax-container
+    height: 100%
+    margin-bottom: 0
+  .section-welcome.parallax-container
+    height: 100%
+    margin-bottom: 0
+    .icon-go
+      height: 25em
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        margin-top: 2em
+    .text-column-left
+      height: 25em
+      display: flex
+      justify-content: center
+      align-items: center
+      span
+        color: #40BFCA
+        font-size: 70px
+        font-weight: bold
+    .text-column-right
+      height: 25em
+      display: flex
+      justify-content: center
+      align-items: center
+      span
+        color: #40BFCA
+        font-size: 70px
+        font-weight: bold
+    img
+      width: 20em
+      height: auto
+
 
 // Register Page
 .register-page
@@ -242,8 +357,11 @@
       div
         text-align: center
     .card-image
-      padding: 0.3em
+      padding: 0em
       border-bottom: 1px solid #cccccc
+      img
+        border-top-right-radius: 1.4em
+        border-top-left-radius: 1.4em
     .card-reveal
       border-radius: 1em
   .section-menu-other.parallax-container
@@ -251,11 +369,12 @@
     margin-bottom: 0
 .item-menu-other
   img
+    background-color: #fff
     width: 100%
-    border: 1px dashed #fff
+    border: 1px dashed #cccccc
     border-radius: 1em
 .col.item-menu-other
-  padding: 2em
+  padding: 4em
 .list-img-slide
   img
     width: 1050px
@@ -276,7 +395,7 @@ $breakpoint-desktop: 1680px
     height: 12em
     top: 0
     z-index: 999
-    transition: height 0.5s
+    transition: hei4ht 0.2s
     display: flex
     flex-flow: row
     .logo
@@ -300,6 +419,7 @@ $breakpoint-desktop: 1680px
     background-color: inherit
     box-shadow: none
     color: #000
+    transition: height 0.2s
     .nav-wrapper
       display: flex
       justify-content: flex-end
@@ -347,12 +467,8 @@ $breakpoint-desktop: 1680px
     ul#register-list-mobile
       top: 41em !important
     li
-      // border-image-slice: 15 15 15 15 fill
-      // border-image-width: 10px 10px 10px 10px
-      // border-image-outset: 0px 0px 0px 0px
-      // border-image-repeat: round round
-      // border-image-source: url("https://mdn.mozillademos.org/files/6011/border-image-3.png")
       border-right: 1px dashed #bec2c6
+      box-shadow: inset 0 0 10px #000000
       a
         color: #000
         text-align: center
@@ -367,7 +483,7 @@ $breakpoint-desktop: 1680px
         width: 14em
   .menu-navigator-component
     height: 4.3em
-    transition: height 0.5s
+    transition: height 0.2s
     ul.dropdown-content
       top: 4.5em !important
       li
@@ -380,7 +496,7 @@ $breakpoint-desktop: 1680px
     height: 12em !important
     top: 0 !important
     z-index: 999 !important
-    transition: height 0.5s !important
+    transition: hei4ht 0.2s !important
     display: flex !important
     flex-flow: row !important
     .logo
@@ -443,7 +559,7 @@ $breakpoint-desktop: 1680px
         width: 12.5em !important
   .menu-navigator-component
     height: 4.3em !important
-    transition: height 0.5s !important
+    transition: hei4ht 0.2s !important
     ul.dropdown-content
       top: 4.5em !important !important
       li
