@@ -14,6 +14,13 @@ export default class MainPage extends React.Component {
         $('.parallax').parallax();
       }
     });
+
+    $(document).ready(function(){
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
   }
 
   getItemPoster() {
