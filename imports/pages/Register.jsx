@@ -5,17 +5,21 @@ const styleBoxAddFriend = {
 }
 
 export default class Register extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onClickRegister = this.onClickRegister.bind(this);
+  }
 
   componentDidMount() {
-    $(document).ready(function(){
-      $('body,html').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
+      $(document).ready(function(){
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
 
-    $(document).ready(function() {
-      $('select').material_select();
+        $('select').material_select();
+        $('.parallax').parallax();
+
+        return false;
     });
 
     $('.datepicker').pickadate({
@@ -23,26 +27,26 @@ export default class Register extends React.Component {
       selectYears: 15 // Creates a dropdown of 15 years to control year
     });
 
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-
     var divTarget = $('#formFriend');
     var i = $('#formFriend div').size() + 1;
 
     $('.btn-add-friend').on('click', function() {
-            $('<div className="input-field col s8 l8"><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
-            i++;
-            return false;
+        $('<div className="input-field col s8 l8"><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
+        i++;
+        return false;
     });
 
     $('#remScnt').on('click', function() {
-            if( i > 2 ) {
-                    $(this).parents('p').remove();
-                    i--;
-            }
-            return false;
+        if( i > 2 ) {
+          $(this).parents('p').remove();
+          i--;
+        }
+        return false;
     });
+  }
+
+  onClickRegister() {
+    const course = this.refs.course.value;
   }
 
   render() {
@@ -60,9 +64,9 @@ export default class Register extends React.Component {
             <div className="input-field col s12 l12">
               <select ref="course" defaultValue="0">
                 <option value="0" disabled>Choose your option</option>
-                <option value="1">เดอะไบร์ท ติว ติด มันส์ พลัส - หาดใหญ่</option>
-                <option value="2">เดอะไบร์ท ติว ติด มันส์ พลัส - ขอนแก่น</option>
-                <option value="3">เดอะไบร์ท ติว ติด มันส์ - พิษณุโลก</option>
+                <option value="hy">เดอะไบร์ท ติว ติด มันส์ พลัส - หาดใหญ่</option>
+                <option value="kk">เดอะไบร์ท ติว ติด มันส์ พลัส - ขอนแก่น</option>
+                <option value="ps">เดอะไบร์ท ติว ติด มันส์ - พิษณุโลก</option>
               </select>
               <label>คอร์สเรียน</label>
             </div>
@@ -95,7 +99,7 @@ export default class Register extends React.Component {
               <label for="school-name">โรงเรียน</label>
             </div>
             <div className="input-field col s6 l6">
-              <select ref="class" defaultValue="0">
+              <select ref="sClass" defaultValue="0">
                 <option value="0" disabled>Choose your option</option>
                 <option value="M4">ม.4</option>
                 <option value="M5">ม.5</option>
@@ -160,6 +164,7 @@ export default class Register extends React.Component {
                 <button
                     type="button"
                     className="waves-effect waves-light btn green btn-signup"
+                    onClick={this.onClickRegister}
                 >
                    ลงทะเบียนเรียน
                  </button>
