@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class ItemPoster extends React.Component {
 
@@ -11,8 +11,12 @@ export default class ItemPoster extends React.Component {
   render() {
     return(
       <div>
-        <img className="materialboxed" width="100%" src="images/mainpage/test.jpg"/>
+        <img className="materialboxed" width="100%" src={this.props.picture.src}/>
       </div>
     )
   }
 }
+
+ItemPoster.propTypes = {
+  picture: PropTypes.object.isRequired,
+};

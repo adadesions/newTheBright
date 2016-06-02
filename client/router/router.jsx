@@ -11,6 +11,10 @@ import LandingPage from '../../imports/pages/LandingPage.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Register from '../../imports/pages/Register.jsx';
 import UploadTranscript from '../../imports/pages/UploadTranscript.jsx';
+import KnowTheBright from '../../imports/pages/KnowTheBright.jsx';
+import WhyTheBright from '../../imports/pages/WhyTheBright.jsx';
+import SmartChild from '../../imports/pages/SmartChild.jsx';
+
 
 const landingRouter = FlowRouter.group({
   name: 'thebright',
@@ -52,6 +56,33 @@ mainRouter.route('/paidform', {
   action() {
     mount(Container, {
       content: <UploadTranscript />,
+    });
+  },
+});
+
+mainRouter.route('/knowthebright', {
+  name: 'know',
+  action() {
+    mount(Container, {
+      content: <KnowTheBright />,
+    });
+  },
+});
+
+mainRouter.route('/whythebright', {
+  name: 'why',
+  action() {
+    mount(Container, {
+      content: <WhyTheBright />,
+    });
+  },
+});
+
+mainRouter.route('/smartchild', {
+  name: 'smartchild',
+  action() {
+    mount(Container, {
+      content: <SmartChild />,
     });
   },
 });

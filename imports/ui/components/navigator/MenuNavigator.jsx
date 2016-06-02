@@ -36,6 +36,27 @@ export default class MenuNavigator extends React.Component {
     });
   }
 
+  onClickKnow() {
+    FlowRouter.go('know');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickWhy() {
+    FlowRouter.go('why');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickSmartChild() {
+    FlowRouter.go('smartchild');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
   render() {
     return(
       <div className="menu-navigator-component">
@@ -74,9 +95,9 @@ export default class MenuNavigator extends React.Component {
           </div>
         </nav>
         <ul id="why-the-bright-list" className="dropdown-content">
-          <li><a href="">รู้จักเดอะไบร์ท</a></li>
-          <li><a href="">ทำไมต้องเดอะไบร์ท</a></li>
-          <li><a href="">ทำเนียบเด็กเก่ง</a></li>
+          <li onClick={this.onClickKnow}><a href="">รู้จักเดอะไบร์ท</a></li>
+          <li onClick={this.onClickWhy}><a href="">ทำไมต้องเดอะไบร์ท</a></li>
+          <li onClick={this.onClickSmartChild}><a href="">ทำเนียบเด็กเก่ง</a></li>
         </ul>
         <ul id="team-the-bright-list" className="dropdown-content">
           <li><a href="">สุดยอดติวเตอร์</a></li>
