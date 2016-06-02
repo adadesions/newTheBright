@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component
-import ItemImgSlideSmartChild from '../ui/components/mainpage/ItemImgSlideSmartChild.jsx';
+import ItemImgSlideSmartChild from '../../ui/components/mainpage/ItemImgSlideSmartChild.jsx';
 export default class SmartChild extends React.Component {
 
   componentDidMount() {

@@ -22,7 +22,7 @@ export default class NavigatorLanding extends React.Component {
         <div className="top-nav-landing">
           <a className="logo" href="/"><img className="nav-logo-landing" src="/images/navigator/logo.png"/></a>
           <div>
-            <a className="download-brochure" href=""><img className="nav-brochrue-landing" src="/images/landing/brochure.png"/></a>
+            <a className="download-brochure" href=""><img className="nav-brochrue-landing animated infinite swing" src="/images/landing/brochure.png"/></a>
           </div>
         </div>
       </nav>

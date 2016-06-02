@@ -11,10 +11,12 @@ import LandingPage from '../../imports/pages/LandingPage.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Register from '../../imports/pages/Register.jsx';
 import UploadTranscript from '../../imports/pages/UploadTranscript.jsx';
-import KnowTheBright from '../../imports/pages/KnowTheBright.jsx';
-import WhyTheBright from '../../imports/pages/WhyTheBright.jsx';
-import SmartChild from '../../imports/pages/SmartChild.jsx';
-
+import KnowTheBright from '../../imports/pages/whythebright/KnowTheBright.jsx';
+import WhyTheBright from '../../imports/pages/whythebright/WhyTheBright.jsx';
+import SmartChild from '../../imports/pages/whythebright/SmartChild.jsx';
+import TheBestTutors from '../../imports/pages/teamthebright/TheBestTutors.jsx';
+import Gallery from '../../imports/pages/gallery/Gallery.jsx';
+import Contact from '../../imports/pages/contact/Contact.jsx';
 
 const landingRouter = FlowRouter.group({
   name: 'thebright',
@@ -83,6 +85,33 @@ mainRouter.route('/smartchild', {
   action() {
     mount(Container, {
       content: <SmartChild />,
+    });
+  },
+});
+
+mainRouter.route('/thebesttutors', {
+  name: 'thebesttutors',
+  action() {
+    mount(Container, {
+      content: <TheBestTutors />,
+    });
+  },
+});
+
+mainRouter.route('/gallery', {
+  name: 'gallery',
+  action() {
+    mount(Container, {
+      content: <Gallery />,
+    });
+  },
+});
+
+mainRouter.route('/contact', {
+  name: 'contact',
+  action() {
+    mount(Container, {
+      content: <Contact />,
     });
   },
 });

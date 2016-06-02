@@ -1,12 +1,12 @@
 import React from 'react';
 
 // Component
-import ItemPoster from '../ui/components/mainpage/ItemPoster.jsx';
-export default class WhyTheBright extends React.Component {
+import ItemPoster from '../../ui/components/mainpage/ItemPoster.jsx';
+export default class Gallery extends React.Component {
 
   getItemPoster() {
     return [
-      { _id: 1, src: '/images/whythebright/why.jpg'}
+      { _id: 1, src: '/images/course/camp2015/comingsoon.jpg'}
     ];
   }
 
@@ -18,7 +18,7 @@ export default class WhyTheBright extends React.Component {
 
   render() {
     return(
-      <div className="why-the-bright">
+      <div className="gallery">
         {this.renderposter()}
       </div>
     )

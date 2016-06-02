@@ -19,6 +19,18 @@ export default class LandingPage extends React.Component {
     FlowRouter.go('main');
   }
 
+  getItemPoster() {
+    return [
+      { _id: 1, src: 'images/mainpage/test.jpg'}
+    ];
+  }
+
+  renderposter() {
+    return this.getItemPoster().map((picture) => (
+      <ItemPoster key={picture._id} picture={picture} />
+    ));
+  }
+
   render() {
     return(
       <div className="landing-page">
@@ -30,20 +42,6 @@ export default class LandingPage extends React.Component {
               <div className="slider">
                 <ul className="slides">
                   <ItemImgSlide />
-                    <li className="list-img-slide">
-                      <img src="/images/mainpage/test2.jpg"/>
-                      <div className="caption center-align">
-                        {/*<h5>This is our big Tagline!</h5>
-                        <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>*/}
-                      </div>
-                    </li>
-                    <li className="list-img-slide">
-                      <img src="/images/mainpage/test3.jpg"/>
-                      <div className="caption center-align">
-                        {/*<h5>This is our big Tagline!</h5>
-                        <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>*/}
-                      </div>
-                    </li>
                 </ul>
               </div>
             </div>
@@ -51,7 +49,7 @@ export default class LandingPage extends React.Component {
           </div>
         </div>
         <div className="col s12 l12 section-poster">
-          <ItemPoster />
+          {this.renderposter()}
         </div>
         <div className="col s12 l12 section-welcome parallax-container">
           <div className="parallax"><img src="/images/landing/bg-pl3.png"/></div>
