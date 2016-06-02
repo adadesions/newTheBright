@@ -3,6 +3,14 @@ import React from 'react';
 // Component
 import ItemPoster from '../../ui/components/mainpage/ItemPoster.jsx';
 export default class Contact extends React.Component {
+  componentDidMount() {
+    $(document).ready(function(){
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  }
 
   getItemPoster() {
     return [

@@ -19,11 +19,18 @@ export default class Navigator extends React.Component {
     });
   }
 
+  onClickMainpage() {
+    FlowRouter.go('main');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
   render() {
     return(
       <nav className="navigator">
         <div className="top-nav">
-          <a className="logo" href="/"><img className="nav-logo" src="/images/navigator/logo.png"/></a>
+          <a onClick={this.onClickMainpage} className="logo" href=""><img className="nav-logo" src="/images/navigator/logo.png"/></a>
         </div>
         <div className="bottom-nav">
           <MenuNavigator />

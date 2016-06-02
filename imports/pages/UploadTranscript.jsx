@@ -3,6 +3,13 @@ import React from 'react';
 export default class UploadTranscript extends React.Component {
 
   componentDidMount() {
+    $(document).ready(function(){
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+
     $(document).ready(function() {
       $('select').material_select();
     });

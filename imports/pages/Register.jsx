@@ -7,6 +7,13 @@ const styleBoxAddFriend = {
 export default class Register extends React.Component {
 
   componentDidMount() {
+    $(document).ready(function(){
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+
     $(document).ready(function() {
       $('select').material_select();
     });
@@ -88,11 +95,28 @@ export default class Register extends React.Component {
               <label for="school-name">โรงเรียน</label>
             </div>
             <div className="input-field col s6 l6">
+<<<<<<< HEAD
               <input ref="class" id="class" type="text" className="validate"/>
               <label for="class">ชั้นปี</label>
             </div>
             <div className="input-field col s6 l6">
               <input ref="program" id="program" type="text" className="validate"/>
+=======
+              <select defaultValue="0">
+                <option value="0" disabled>Choose your option</option>
+                <option value="1">ม.4</option>
+                <option value="2">ม.5</option>
+                <option value="3">ม.6</option>
+              </select>
+              <label for="class">ชั้นปี</label>
+            </div>
+            <div className="input-field col s6 l6">
+              <select defaultValue="0">
+                <option value="0" disabled>Choose your option</option>
+                <option value="1">สายวิทย์</option>
+                <option value="2">สายศิลป์</option>
+              </select>
+>>>>>>> d9005387ac8711374d6b6ddb8abee8d83c72179c
               <label for="program">สาย</label>
             </div>
             <div className="input-field col s12 l12">
