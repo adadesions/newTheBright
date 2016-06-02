@@ -86,7 +86,7 @@ export default class Register extends React.Component {
             </div>
             <div className="input-field col s12 l4">
               <input onKeyDown={this.checkNum} id="pin-code" type="text" className="validate" maxLength="13"/>
-              <label for="pin-code">เลขประจำตัวประชาชน</label>
+              <label lef="pinCode" for="pin-code">เลขประจำตัวประชาชน</label>
             </div>
             <div className="input-field col s12 l6">
               <input id="nick-name" type="text" className="validate"/>
