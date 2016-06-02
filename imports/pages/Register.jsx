@@ -45,6 +45,12 @@ export default class Register extends React.Component {
     });
   }
 
+  checkNum(e){
+    if (e.keyCode < 48 || e.keyCode > 57){
+      Materialize.toast('กรุณาใส่ตัวเลข', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
+    }
+	}
+
   render() {
     return(
       <div className="register-page">
@@ -79,7 +85,7 @@ export default class Register extends React.Component {
               <label for="name">ชื่อ-นามสกุล</label>
             </div>
             <div className="input-field col s12 l4">
-              <input id="pin-code" type="text" className="validate"/>
+              <input onKeyDown={this.checkNum} id="pin-code" type="text" className="validate" maxLength="13"/>
               <label for="pin-code">เลขประจำตัวประชาชน</label>
             </div>
             <div className="input-field col s12 l6">
