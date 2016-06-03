@@ -17,6 +17,9 @@ import SmartChild from '../../imports/pages/whythebright/SmartChild.jsx';
 import TheBestTutors from '../../imports/pages/teamthebright/TheBestTutors.jsx';
 import Gallery from '../../imports/pages/gallery/Gallery.jsx';
 import Contact from '../../imports/pages/contact/Contact.jsx';
+import CourseMFour from '../../imports/pages/course/CourseMFour.jsx';
+import CourseMFive from '../../imports/pages/course/CourseMFive.jsx';
+import CourseCoachMe from '../../imports/pages/course/CourseCoachMe.jsx';
 
 const landingRouter = FlowRouter.group({
   name: 'thebright',
@@ -112,6 +115,33 @@ mainRouter.route('/contact', {
   action() {
     mount(Container, {
       content: <Contact />,
+    });
+  },
+});
+
+mainRouter.route('/courseM4', {
+  name: 'coursem4',
+  action() {
+    mount(Container, {
+      content: <CourseMFour />,
+    });
+  },
+});
+
+mainRouter.route('/courseM5', {
+  name: 'coursem5',
+  action() {
+    mount(Container, {
+      content: <CourseMFive />,
+    });
+  },
+});
+
+mainRouter.route('/courseCoachMe', {
+  name: 'coursecoachme',
+  action() {
+    mount(Container, {
+      content: <CourseCoachMe />,
     });
   },
 });

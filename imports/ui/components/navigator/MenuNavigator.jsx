@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component
 export default class MenuNavigator extends React.Component {
 
   componentDidMount() {
@@ -11,6 +12,7 @@ export default class MenuNavigator extends React.Component {
       });
 
       $(".dropdown-button").dropdown();
+
     });
 
   }
@@ -78,6 +80,18 @@ export default class MenuNavigator extends React.Component {
     });
   }
 
+  onClickCourseM4() {
+    FlowRouter.go('coursem4');
+  }
+
+  onClickCourseM5() {
+    FlowRouter.go('coursem5');
+  }
+
+  onClickCourseCoachMe() {
+    FlowRouter.go('coursecoachme');
+  }
+
   render() {
     return(
       <div className="menu-navigator-component">
@@ -103,9 +117,9 @@ export default class MenuNavigator extends React.Component {
                 <li onClick={this.onClickTutors}><a className="button-right" href="">สุดยอดติวเตอร์</a></li>
                 <li><a className="button-right" href="">เดอะไบร์ททีม</a></li>
               <li><a id="course" className="button-left" href="">คอร์สเรียน</a></li>
-                <li><a className="button-right" href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
-                <li><a className="button-right" href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
-                <li><a className="button-right" href="">Coach Me Program</a></li>
+                <li onClick={this.onClickCourseM4} className="list-course"><a id="m4" className="button-right" href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
+                <li onClick={this.onClickCourseM5} className="list-course"><a id="m5" className="button-right" href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
+                <li onClick={this.onClickCourseCoachMe} className="list-course"><a id="m6" className="button-right" href="">Coach Me Program</a></li>
               <li><a id="register" className="button-left" href="">สมัครเรียน</a></li>
                 <li onClick={this.onClickRegister}><a className="button-right" href="">ขั้นตอนการสมัคร</a></li>
                 <li onClick={this.onClickUploadTranscript}><a className="button-right" href="">แจ้งการชำระเงิน</a></li>
@@ -125,9 +139,9 @@ export default class MenuNavigator extends React.Component {
           <li><a href="">เดอะไบร์ททีม</a></li>
         </ul>
         <ul id="course-list" className="dropdown-content">
-          <li><a href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
-          <li><a href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
-          <li><a href="">Coach Me Program</a></li>
+          <li onClick={this.onClickCourseM4} className="list-course"><a id="m4" href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
+          <li onClick={this.onClickCourseM5} className="list-course"><a id="m5" href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
+          <li onClick={this.onClickCourseCoachMe} className="list-course"><a id="m6" href="">Coach Me Program</a></li>
         </ul>
         <ul id="register-list" className="dropdown-content">
           <li onClick={this.onClickRegister}><a href="">ขั้นตอนการสมัคร</a></li>
