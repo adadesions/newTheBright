@@ -79,6 +79,7 @@ export default class RegisterCamp extends React.Component {
     const parentsName = this.refs.parentsName.value;
     const relation = this.refs.relation.value;
     const parentsTel = this.refs.parentsTel.value;
+    const approve = "no"
 
     const students = {
       province,
@@ -97,7 +98,8 @@ export default class RegisterCamp extends React.Component {
       lineId,
       parentsName,
       relation,
-      parentsTel
+      parentsTel,
+      approve
     }
 
     Students.insert(students);

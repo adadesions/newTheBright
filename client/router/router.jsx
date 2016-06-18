@@ -5,8 +5,10 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 // Containers
 import Container from '../../imports/layouts/Container.jsx';
 import LandingContainer from '../../imports/layouts/LandingContainer.jsx';
+import ContainerAdmin from '../../imports/layouts/ContainerAdmin.jsx';
 
 // Components
+import Admin from '../../imports/pages/admin/Admin.jsx';
 import LandingPage from '../../imports/pages/LandingPage.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Register from '../../imports/pages/Register.jsx';
@@ -28,6 +30,19 @@ const landingRouter = FlowRouter.group({
 
 const mainRouter = FlowRouter.group({
   name: 'mainpage',
+});
+
+const adminRouter = FlowRouter.group({
+  name: 'admin',
+});
+
+adminRouter.route('/admin', {
+  name: 'adminsite',
+  action() {
+    mount(ContainerAdmin, {
+      content: <Admin />,
+    });
+  },
 });
 
 landingRouter.route('/', {
