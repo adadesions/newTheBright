@@ -37,9 +37,9 @@ export default class MainPage extends React.Component {
 
   getItemCard() {
     return [
-      { _id: 1, src: 'images/mainpage/card-course/hy.png', title: 'หาดใหญ่', linktitle: '' },
-      { _id: 2, src: 'images/mainpage/card-course/kk.png', title: 'ขอนแก่น', linktitle: '' },
-      { _id: 3, src: 'images/mainpage/card-course/ps.png', title: 'พิษณุโลก', linktitle: '' },
+      { _id: 1, src: 'images/mainpage/card-course/hy.png', title: 'หาดใหญ่', linktitle: '/hatyai' },
+      { _id: 2, src: 'images/mainpage/card-course/kk.png', title: 'ขอนแก่น', linktitle: '/khonkaen' },
+      { _id: 3, src: 'images/mainpage/card-course/ps.png', title: 'พิษณุโลก', linktitle: '/phitsanulok' },
       { _id: 4, src: 'images/mainpage/card-course/cs.png', title: 'Comming Soon', linktitle: '' }
     ];
   }

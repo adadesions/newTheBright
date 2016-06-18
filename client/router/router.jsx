@@ -10,6 +10,7 @@ import LandingContainer from '../../imports/layouts/LandingContainer.jsx';
 import LandingPage from '../../imports/pages/LandingPage.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Register from '../../imports/pages/Register.jsx';
+import RegisterCamp from '../../imports/pages/RegisterCamp.jsx';
 import UploadTranscript from '../../imports/pages/UploadTranscript.jsx';
 import KnowTheBright from '../../imports/pages/whythebright/KnowTheBright.jsx';
 import WhyTheBright from '../../imports/pages/whythebright/WhyTheBright.jsx';
@@ -55,6 +56,35 @@ mainRouter.route('/register', {
     });
   },
 });
+
+// Register Camp
+mainRouter.route('/hatyai', {
+  name: 'registerhatyai',
+  action() {
+    mount(RegisterCamp,{
+      province: "hatyai"
+    });
+  },
+});
+
+mainRouter.route('/khonkaen', {
+  name: 'registerkhonkaen',
+  action() {
+    mount(RegisterCamp, {
+      province: "khonkaen"
+    });
+  },
+});
+
+mainRouter.route('/phitsanulok', {
+  name: 'registerphitsanulok',
+  action() {
+    mount(RegisterCamp, {
+      province: "phitsanulok"
+    });
+  },
+});
+
 
 mainRouter.route('/paidform', {
   name: 'paidform',
