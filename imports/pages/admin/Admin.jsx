@@ -17,8 +17,18 @@ export default class Admin extends React.Component {
     });
   }
 
-  renderName() {
-    return this.props.students.map((names) => (
+  renderNameHatyai() {
+    return this.props.studentsHatyai.map((names) => (
+      <StudentItems key={names._id} names={names} />
+    ));
+  }
+  renderNameKhonkaen() {
+    return this.props.studentsKhonkaen.map((names) => (
+      <StudentItems key={names._id} names={names} />
+    ));
+  }
+  renderNamePhitsanulok() {
+    return this.props.studentsPhitsanulok.map((names) => (
       <StudentItems key={names._id} names={names} />
     ));
   }
@@ -33,14 +43,26 @@ export default class Admin extends React.Component {
     return(
       <div className="admin">
         <div className="row">
-          <div className="col l6">
-            <h4>Students</h4>
+          <div className="col l3 s12">
+            <h5>Hatyai</h5>
             <ul className="collapsible popout" data-collapsible="accordion">
-              {this.renderName()}
+              {this.renderNameHatyai()}
             </ul>
           </div>
-          <div className="col l6">
-            <h4>Students Approve</h4>
+          <div className="col l3 s12">
+            <h5>Khonkaen</h5>
+            <ul className="collapsible popout" data-collapsible="accordion">
+              {this.renderNameKhonkaen()}
+            </ul>
+          </div>
+          <div className="col l3 s12">
+            <h5>Phitsanulok</h5>
+            <ul className="collapsible popout" data-collapsible="accordion">
+              {this.renderNamePhitsanulok()}
+            </ul>
+          </div>
+          <div className="col l3 s12">
+            <h5>Approved</h5>
             <ul className="collapsible popout" data-collapsible="accordion">
               {this.renderNameApprove()}
             </ul>
@@ -53,7 +75,9 @@ export default class Admin extends React.Component {
 
 export default createContainer(() => {
   return {
-    students: Students.find({"approve": "no"}).fetch(),
+    studentsHatyai: Students.find({"approve": "no","province": "hatyai"}).fetch(),
+    studentsKhonkaen: Students.find({"approve": "no","province": "khonkaen"}).fetch(),
+    studentsPhitsanulok: Students.find({"approve": "no","province": "phitsanulok"}).fetch(),
     studentsApprove: Students.find({"approve": "yes"}).fetch(),
   };
 }, Admin);

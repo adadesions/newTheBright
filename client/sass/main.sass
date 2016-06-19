@@ -488,13 +488,12 @@ html
   padding: 2rem
 .approve-menu
   a
-    width: 2.5rem !important
-    height: 2.5rem !important
+    width: 2rem !important
+    height: 2rem !important
     margin: 0.2rem
     i
-      line-height: 2.6rem !important
-      font-size: 1.6rem !important
-      margin-left: 0.25rem
+      line-height: 2rem !important
+      font-size: 1.3rem !important
 i.approve-icon
   color: #8bc34a
 /////Responsive/////
@@ -506,6 +505,30 @@ $breakpoint-desktop: 1680px
 
 /////mobile large/////
 @media only screen and (min-device-width: 351px) and (max-device-width: $breakpoint-mobile-large)
+  //Admin
+  .collapsible-header
+    display: flex
+    justify-content: space-between
+    height: 6rem
+    font-size: 45px
+    padding: 1rem
+    i
+      font-size: 3rem
+      margin-right: 2.5rem
+  .collapsible-body
+    padding: 2rem
+    font-size: 20px !important
+  .approve-menu
+    a
+      width: 4rem !important
+      height: 4rem !important
+      margin: 0.5rem
+      i
+        line-height: 3.8rem !important
+        font-size: 3rem !important
+        margin-left: 0.5rem
+  i.approve-icon
+    color: #8bc34a
   .navigator
     position: fixed
     background: url('/images/navigator/bg.png') no-repeat fixed
