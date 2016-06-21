@@ -1,16 +1,27 @@
 import React, { PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 
+// Collection
+import { Students } from '../../../api/Students.js';
 export default class StudentItemsApprove extends React.Component {
 
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+    this.onClickRemoveApprove = this.onClickRemoveApprove.bind(this);
+  }
 
+  onClickRemoveApprove() {
+    Students.remove({ "_id" : this.props.names._id })
   }
 
   render() {
     return(
       <li>
-        <div className="collapsible-header"><i className="material-icons approve-icon">verified_user</i>{this.props.names.fullName}</div>
+        <div className="collapsible-header"><i className="material-icons approve-icon">verified_user</i>{this.props.names.fullName}
+          <div className="remove-btn">
+            <a onClick={this.onClickRemoveApprove} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">delete</i></a>
+          </div>
+        </div>
         <div className="collapsible-body">
           <div>จังหวัด : {this.props.names.province}</div>
           <div>โรงเรียน : {this.props.names.schoolName}</div>
@@ -21,6 +32,7 @@ export default class StudentItemsApprove extends React.Component {
           <div>อีเมล์ : {this.props.names.email}</div>
           <div>ชื่อผู้ปกครอง : {this.props.names.parentsName}</div>
           <div>เบอร์โทรผู้ปกครอง : {this.props.names.parentsTel}</div>
+          <div>ชื่อเพื่อนในกลุ่ม : {this.props.names.friendName}</div>
         </div>
       </li>
     )

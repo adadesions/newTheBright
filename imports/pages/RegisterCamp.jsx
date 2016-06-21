@@ -8,6 +8,8 @@ import Footer from '../ui/components/footer/Footer.jsx';
 // Collaction
 import { Students } from '../api/Students.js';
 
+var i = $('#formFriend div').size() + 1;
+
 const styleBoxAddFriend = {
   width: '60%',
 }
@@ -17,41 +19,36 @@ export default class RegisterCamp extends React.Component {
     super(props);
     this.onClickRegister = this.onClickRegister.bind(this);
     this.checkNum = this.checkNum.bind(this);
+    this.onClickAddFriend = this.onClickAddFriend.bind(this);
   }
 
   componentDidMount() {
-      $(document).ready(function(){
-        $('body,html').animate({
-          scrollTop: 0
-        }, 800);
+    // Scroll page on top
+    $(document).ready(function(){
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+    // Parallax
+      $('select').material_select();
+      $('.parallax').parallax();
 
-        $('select').material_select();
-        $('.parallax').parallax();
-
-        return false;
+      return false;
     });
 
+    // Date picker form
     $('.datepicker').pickadate({
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 15 // Creates a dropdown of 15 years to control year
     });
 
+  }
+
+  onClickAddFriend() {
+    // Form Add Friend
     var divTarget = $('#formFriend');
-    var i = $('#formFriend div').size() + 1;
 
-    $('.btn-add-friend').on('click', function() {
-        $('<div className="input-field col s8 l8"><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
-        i++;
-        return false;
-    });
-
-    $('#remScnt').on('click', function() {
-        if( i > 2 ) {
-          $(this).parents('p').remove();
-          i--;
-        }
-        return false;
-    });
+    $('<div className="input-field col s8 l8"><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
+    i++;
   }
 
   checkNum(e){
@@ -80,6 +77,7 @@ export default class RegisterCamp extends React.Component {
     const relation = this.refs.relation.value;
     const parentsTel = this.refs.parentsTel.value;
     const approve = "no"
+    const friendName = $('#friend-name').val()+"("+ $('#friend-nick-name').val() +")"+" , ";
 
     const students = {
       province,
@@ -99,7 +97,8 @@ export default class RegisterCamp extends React.Component {
       parentsName,
       relation,
       parentsTel,
-      approve
+      approve,
+      friendName
     }
 
     Students.insert(students);
@@ -201,7 +200,7 @@ export default class RegisterCamp extends React.Component {
                   <span>มีเพื่อนมาเรียนด้วย</span>
                 </div>
                 <div className="col s6 l6 friend-button ">
-                  <a className="waves-effect waves-light btn green btn-add-friend">+ เพิ่มเพื่อน</a>
+                  <a onClick={this.onClickAddFriend} className="waves-effect waves-light btn green btn-add-friend">+ เพิ่มเพื่อน</a>
                 </div>
               </div>
               <div style={styleBoxAddFriend} id="formFriend" className="row">

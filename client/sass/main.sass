@@ -481,12 +481,48 @@ html
 
 
 //Admin
+.admin
+  .row
+    margin-bottom: 0
+.menu-admin-manage
+  width: 20%
+  display: flex
+  justify-content: space-around
+  align-items: flex-end
+.head-admin
+  padding-left: 2rem
+.menu-admin
+  padding: 0 !important
+  font-size: 24px
+  margin-bottom: 0 !important
+.menu-khonkaen
+  width: 100%
+  padding: 1rem
+  cursor: pointer
+.menu-khonkaen:hover
+  color: #7BCBCC
+.menu-khonkaen.active
+  color: #7BCBCC
+.menu-hatyai
+  padding: 1rem
+  cursor: pointer
+.menu-hatyai:hover
+  color: #7BCBCC
+.menu-hatyai.active
+  color: #7BCBCC
+.menu-phitsanulok
+  padding: 1rem
+  cursor: pointer
+.menu-phitsanulok:hover
+  color: #7BCBCC
+.menu-phitsanulok.active
+  color: #7BCBCC
 .collapsible-header
   display: flex
   justify-content: space-between
 .collapsible-body
   padding: 2rem
-.approve-menu
+.approve-btn
   a
     width: 2rem !important
     height: 2rem !important
@@ -494,6 +530,16 @@ html
     i
       line-height: 2rem !important
       font-size: 1.3rem !important
+.remove-btn
+  a
+    width: 2rem !important
+    height: 2rem !important
+    margin: 0.2rem
+    i
+      line-height: 2rem !important
+      font-size: 1.3rem !important
+.list-student
+  padding: 1rem !important
 i.approve-icon
   color: #8bc34a
 /////Responsive/////
@@ -505,6 +551,24 @@ $breakpoint-desktop: 1680px
 
 /////mobile large/////
 @media only screen and (min-device-width: 351px) and (max-device-width: $breakpoint-mobile-large)
+  .section-slide
+    background: url('/images/mainpage/bg-pl.jpg')
+    background-size: cover
+    .row
+      margin-bottom: 0
+  .section-welcome
+    background: url('/images/landing/bg-pl3.png')
+    background-size: cover
+  .top-nav-landing
+    width: 100%
+  .text-column-right
+    span
+      font-size: 49px !important
+      color: #ffa449 !important
+  .text-column-left
+    span
+      font-size: 48px !important
+      color: #ffa449 !important
   //Admin
   .collapsible-header
     display: flex
@@ -540,7 +604,7 @@ $breakpoint-desktop: 1680px
     display: flex
     flex-flow: row
     .logo
-      height: 12em
+      height: 12rem !important
     .top-nav
       padding-left: 4%
       padding-right: 4%
@@ -641,6 +705,13 @@ $breakpoint-desktop: 1680px
     flex-flow: row !important
     .logo
       height: 12em !important
+      img
+        height: 10em !important
+        width: auto !important
+    .download-brochure
+      img
+        height: 25em !important
+        width: auto !important
     .top-nav
       padding-left: 4% !important
       padding-right: 4% !important
@@ -956,7 +1027,76 @@ $breakpoint-desktop: 1680px
       margin-top: 2rem
     .picker__footer
       margin-top: 7rem
-
+  //Admin
+  .head-admin
+    h3
+      font-size: 5rem
+  .admin
+    .row
+      margin-bottom: 0
+  .menu-admin-manage
+    width: 20%
+    display: flex
+    justify-content: space-around
+    align-items: flex-end
+  .head-admin
+    padding-left: 2rem
+  .menu-admin
+    padding: 0 !important
+    font-size: 24px
+    margin-bottom: 0 !important
+  .menu-khonkaen
+    width: 100%
+    padding: 1rem
+    cursor: pointer
+    font-size: 3rem
+  .menu-khonkaen:hover
+    color: #7BCBCC
+  .menu-khonkaen.active
+    color: #7BCBCC
+  .menu-hatyai
+    padding: 1rem
+    cursor: pointer
+    font-size: 3rem
+  .menu-hatyai:hover
+    color: #7BCBCC
+  .menu-hatyai.active
+    color: #7BCBCC
+  .menu-phitsanulok
+    padding: 1rem
+    cursor: pointer
+    font-size: 3rem
+  .menu-phitsanulok:hover
+    color: #7BCBCC
+  .menu-phitsanulok.active
+    color: #7BCBCC
+  .collapsible-header
+    display: flex
+    justify-content: space-between
+  .collapsible-body
+    padding: 2rem
+  .approve-btn
+    a
+      width: 2rem !important
+      height: 2rem !important
+      margin: 0.2rem
+      i
+        line-height: 2rem !important
+        font-size: 1.3rem !important
+  .remove-btn
+    a
+      width: 2rem !important
+      height: 2rem !important
+      margin: 0.2rem
+      i
+        line-height: 2rem !important
+        font-size: 1.3rem !important
+  .list-student
+    padding: 1rem !important
+    h5
+      font-size: 5rem
+  i.approve-icon
+    color: #8bc34a
 /////mobile small/////
 @media only screen and (min-device-width: 100px) and (max-device-width: $breakpoint-mobile-mini)
   .navigator

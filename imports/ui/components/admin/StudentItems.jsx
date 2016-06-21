@@ -23,11 +23,15 @@ export default class StudentItems extends React.Component {
 
   render() {
     return(
-      <li>
+      <li className="student-item">
         <div className="collapsible-header">
-          <div><i className="material-icons">supervisor_account</i>{this.props.names.fullName}</div>
-          <div className="approve-menu">
-            <a onClick={this.onClickApprove} className="btn-floating btn-large waves-effect waves-light green"><i className="material-icons">thumb_up</i></a>
+          <div className="approve-btn">
+            <a onClick={this.onClickApprove} className="btn-floating btn-large waves-effect waves-light green"><i className="material-icons">spellcheck</i></a>
+          </div>
+          <div>
+            <i className="material-icons">supervisor_account</i>{this.props.names.fullName}
+          </div>
+          <div className="remove-btn">
             <a onClick={this.onClickRemove} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">delete</i></a>
           </div>
         </div>
@@ -41,6 +45,7 @@ export default class StudentItems extends React.Component {
           <div>อีเมล์ : {this.props.names.email}</div>
           <div>ชื่อผู้ปกครอง : {this.props.names.parentsName}</div>
           <div>เบอร์โทรผู้ปกครอง : {this.props.names.parentsTel}</div>
+          <div>ชื่อเพื่อนในกลุ่ม : {this.props.names.friendName}</div>
         </div>
       </li>
     )

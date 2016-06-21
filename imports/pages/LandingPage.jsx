@@ -1,4 +1,6 @@
-import React from 'react';
+{
+  
+}import React from 'react';
 
 // Component
 import ItemImgSlide from '../ui/components/mainpage/ItemImgSlide.jsx';
