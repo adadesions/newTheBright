@@ -8,8 +8,6 @@ import Footer from '../ui/components/footer/Footer.jsx';
 // Collaction
 import { Students } from '../api/Students.js';
 
-var i = $('#formFriend div').size() + 1;
-
 const styleBoxAddFriend = {
   width: '60%',
 }
@@ -20,6 +18,9 @@ export default class RegisterCamp extends React.Component {
     this.onClickRegister = this.onClickRegister.bind(this);
     this.checkNum = this.checkNum.bind(this);
     this.onClickAddFriend = this.onClickAddFriend.bind(this);
+    this.state = {
+      friendId: 0,
+    }
   }
 
   componentDidMount() {
@@ -46,9 +47,11 @@ export default class RegisterCamp extends React.Component {
   onClickAddFriend() {
     // Form Add Friend
     var divTarget = $('#formFriend');
-
-    $('<div className="input-field col s8 l8"><input id="friend-name" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>').appendTo(divTarget);
-    i++;
+    let friendId = this.state.friendId;
+    $(`<div className="input-field col s8 l8"><input id="friend-name${friendId}" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name${friendId}" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>`).appendTo(divTarget);
+    this.setState({
+      friendId: ++friendId,
+    })
   }
 
   checkNum(e){
@@ -77,7 +80,15 @@ export default class RegisterCamp extends React.Component {
     const relation = this.refs.relation.value;
     const parentsTel = this.refs.parentsTel.value;
     const approve = "no"
-    const friendName = $('#friend-name').val()+"("+ $('#friend-nick-name').val() +")"+" , ";
+    let friendName = () => {
+      let currentId = this.state.friendId - 1;      
+      let friendGroup = [];
+      for( i = currentId; i >= 0; i-- ){
+        let data = $(`#friend-name${i}`).val()+"("+ $(`#friend-nick-name${i}`).val() +")"+" , ";
+        friendGroup.push(data);
+      }
+      return friendGroup;
+    }
 
     const students = {
       province,
@@ -98,7 +109,7 @@ export default class RegisterCamp extends React.Component {
       relation,
       parentsTel,
       approve,
-      friendName
+      friendName: friendName()
     }
 
     Students.insert(students);

@@ -61,7 +61,6 @@ export default class Register extends React.Component {
 
   onClickRegister() {
     const course = this.refs.course.value;
-    console.log(course)
   }
 
 
