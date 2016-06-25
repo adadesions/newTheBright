@@ -9,6 +9,7 @@ import MenuOther from '../ui/components/mainpage/MenuOther.jsx';
 export default class MainPage extends React.Component {
 
   componentDidMount() {
+    // Check width screen
     $(document).ready(function(){
       if(screen.width > 1000){
         $('.parallax').parallax();
