@@ -24,6 +24,7 @@ import CourseMFour from '../../imports/pages/course/CourseMFour.jsx';
 import CourseMFive from '../../imports/pages/course/CourseMFive.jsx';
 import CourseCoachMe from '../../imports/pages/course/CourseCoachMe.jsx';
 import IndividualProfile from '../../imports/pages/profile/IndividualProfile.jsx';
+import GroupProfile from '../../imports/pages/profile/GroupProfile.jsx';
 import SearchID from '../../imports/pages/SearchID.jsx';
 
 const landingRouter = FlowRouter.group({
@@ -198,6 +199,15 @@ mainRouter.route('/profile', {
   action() {
     mount(Container, {
       content: <IndividualProfile />,
+    });
+  },
+});
+
+mainRouter.route('/groupprofile', {
+  name: 'groupprofile',
+  action() {
+    mount(Container, {
+      content: <GroupProfile />,
     });
   },
 });

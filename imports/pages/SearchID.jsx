@@ -11,7 +11,7 @@ export default class SearchID extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      click: 0,
+      search_id: "",
     }
     this.onClickSearch = this.onClickSearch.bind(this);
   }
@@ -26,24 +26,15 @@ export default class SearchID extends React.Component {
   onClickSearch() {
     const id = this.refs.search.value;
     this.setState({
-      click: 1,
+      search_id: id,
     })
   }
 
   renderListSearch() {
-    return this.props.itemsSearch.map((itemnames) => (
+    // console.log(this.state.search_id);
+    return this.props.items.map((itemnames) => (
       <SearchItems key={itemnames._id} itemnames={itemnames} />
     ));
-    // if(this.state.click = 1){
-    //   return this.props.itemsSearch.map((itemnames) => (
-    //     <SearchItems key={itemnames._id} itemnames={itemnames} />
-    //   ));
-    // }
-    // else{
-    //   return this.props.items.map((itemnames) => (
-    //     <SearchItems key={itemnames._id} itemnames={itemnames} />
-    //   ));
-    // }
   }
 
   render() {
@@ -70,6 +61,5 @@ export default class SearchID extends React.Component {
 export default createContainer(() => {
   return {
     items: Students.find({}).fetch(),
-    itemsSearch: Students.find({"fullName": "phitsanulok"}).fetch(),
   };
 }, SearchID);

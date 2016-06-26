@@ -92,6 +92,10 @@ export default class MenuNavigator extends React.Component {
     FlowRouter.go('coursecoachme');
   }
 
+  onClickCheck() {
+    FlowRouter.go('search');
+  }
+
   render() {
     return(
       <div className="menu-navigator-component">
@@ -123,6 +127,7 @@ export default class MenuNavigator extends React.Component {
               <li><a id="register" className="button-left" href="">สมัครเรียน</a></li>
                 <li onClick={this.onClickRegister}><a className="button-right" href="">ขั้นตอนการสมัคร</a></li>
                 <li onClick={this.onClickUploadTranscript}><a className="button-right" href="">แจ้งการชำระเงิน</a></li>
+                <li onClick={this.onClickCheck}><a className="button-right" href="">ตรวจสอบรายชื่อ</a></li>
                 <li><a className="button-right" href="">ดาวน์โหลดใบชำระเงิน</a></li>
               <li onClick={this.onClickGallery}><a id="gallery" className="button-left" href="">ภาพประทับใจ</a></li>
               <li onClick={this.onClickContact}><a id="contact" className="button-left" href="">ติดต่อเรา</a></li>
@@ -146,6 +151,7 @@ export default class MenuNavigator extends React.Component {
         <ul id="register-list" className="dropdown-content">
           <li onClick={this.onClickRegister}><a href="">ขั้นตอนการสมัคร</a></li>
           <li onClick={this.onClickUploadTranscript}><a href="">แจ้งการชำระเงิน</a></li>
+          <li onClick={this.onClickCheck}><a href="">ตรวจสอบรายชื่อ</a></li>
           <li><a href="">ดาวน์โหลดใบชำระเงิน</a></li>
         </ul>
       </div>

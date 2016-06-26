@@ -33,7 +33,7 @@ export default class RegisterCamp extends React.Component {
       $('select').material_select();
       $('.parallax').parallax();
 
-      return false;
+      $('.modal-trigger').leanModal();
     });
 
     // Date picker form
@@ -48,7 +48,7 @@ export default class RegisterCamp extends React.Component {
     // Form Add Friend
     var divTarget = $('#formFriend');
     let friendId = this.state.friendId;
-    $(`<div className="input-field col s8 l8"><input id="friend-name${friendId}" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-school${friendId}" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>`).appendTo(divTarget);
+    $(`<div className="input-field col s8 l8"><input id="friend-name${friendId}" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-school${friendId}" type="text" className="validate"/><label for="friend-school">โรงเรียน</label></div>`).appendTo(divTarget);
     this.setState({
       friendId: ++friendId,
     })
@@ -113,6 +113,12 @@ export default class RegisterCamp extends React.Component {
     }
 
     Students.insert(students);
+    if(this.state.friendId < 1){
+      FlowRouter.go('profile');
+    }
+    else{
+      FlowRouter.go('groupprofile');
+    }
   }
 
   render() {
@@ -220,13 +226,23 @@ export default class RegisterCamp extends React.Component {
               <div className="input-field col s12 l12">
                 <div className="col s0 l4"><br/></div>
                 <div className="col s12 l4 section-button">
-                  <button
+                  <a
                       type="button"
-                      className="waves-effect waves-light btn green btn-signup"
-                      onClick={this.onClickRegister}
+                      href="#modal1"
+                      className="waves-effect waves-light btn modal-trigger green btn-signup"
                   >
                      ลงทะเบียนเรียน
-                   </button>
+                   </a>
+                   <div id="modal1" className="modal">
+                    <div className="modal-content">
+                      <h4>Confirm</h4>
+                      <p>ยืนยันการสมัคร ?</p>
+                    </div>
+                    <div className="modal-footer">
+                      <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">DISAGREE</a>
+                      <a onClick={this.onClickRegister} href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">AGREE</a>
+                    </div>
+                  </div>
                 </div>
                 <div className="col s0 l4"><br/></div>
               </div>

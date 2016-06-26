@@ -26,6 +26,6 @@ export default class IndividualProfile extends React.Component {
 
 export default createContainer(() => {
   return {
-    students: Students.find({"_id": "pxedf3ddiwGD7ifSJ"}).fetch(),
+    students: Students.find({"_id": "ZePaa4wJuYje8aCSf"}).fetch(),
   };
 }, IndividualProfile);
