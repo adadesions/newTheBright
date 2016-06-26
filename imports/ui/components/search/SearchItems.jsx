@@ -2,19 +2,23 @@ import React, { PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 
 // Collection
-import { Students } from '../../api/Students.js';
+import { Students } from '../../../api/Students.js';
 
 export default class DetailStudent extends React.Component {
 
   render() {
     return(
-      <div className="ind-profile-detail">
-        <div><h5>ชื่อ :</h5> <h5>{this.props.students.fullName}</h5></div>
-      </div>
+      <li className="item-student">
+        <div className="collapsible-header">
+          <div>
+            <i className="material-icons">supervisor_account</i>{this.props.itemnames.fullName}
+          </div>
+        </div>
+      </li>
     )
   }
 }
 
-DetailStudent.propTypes = {
-  students: PropTypes.object.isRequired,
+DetailStudent.PropTypes = {
+  itemnames: PropTypes.object.isRequired,
 };

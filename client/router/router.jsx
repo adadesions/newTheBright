@@ -24,6 +24,7 @@ import CourseMFour from '../../imports/pages/course/CourseMFour.jsx';
 import CourseMFive from '../../imports/pages/course/CourseMFive.jsx';
 import CourseCoachMe from '../../imports/pages/course/CourseCoachMe.jsx';
 import IndividualProfile from '../../imports/pages/profile/IndividualProfile.jsx';
+import SearchID from '../../imports/pages/SearchID.jsx';
 
 const landingRouter = FlowRouter.group({
   name: 'thebright',
@@ -197,6 +198,15 @@ mainRouter.route('/profile', {
   action() {
     mount(Container, {
       content: <IndividualProfile />,
+    });
+  },
+});
+
+mainRouter.route('/search', {
+  name: 'search',
+  action() {
+    mount(Container, {
+      content: <SearchID />,
     });
   },
 });
