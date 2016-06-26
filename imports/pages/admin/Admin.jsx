@@ -112,18 +112,18 @@ export default class Admin extends React.Component {
           <h3>Admin Site</h3>
         </div>
         <div className="row">
-          <div className="col l2 menu-admin">
+          <div className="col l2 s12 menu-admin">
             <div onClick={this.renderName} className="menu-khonkaen">Khonkaen</div>
             <div onClick={this.renderName} className="menu-hatyai">Hatyai</div>
             <div onClick={this.renderName} className="menu-phitsanulok">Phitsanulok</div>
           </div>
-          <div className="col l5 list-student">
+          <div className="col l5 s12 list-student">
             <h5>Students</h5>
             <ul className="collapsible popout" data-collapsible="accordion">
               {this.renderList()}
             </ul>
           </div>
-          <div className="col l5 list-student">
+          <div className="col l5 s12 list-student">
             <h5>Approved</h5>
             <ul className="collapsible popout" data-collapsible="accordion">
               {this.renderListApprove()}

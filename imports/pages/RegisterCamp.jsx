@@ -48,7 +48,7 @@ export default class RegisterCamp extends React.Component {
     // Form Add Friend
     var divTarget = $('#formFriend');
     let friendId = this.state.friendId;
-    $(`<div className="input-field col s8 l8"><input id="friend-name${friendId}" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-nick-name${friendId}" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>`).appendTo(divTarget);
+    $(`<div className="input-field col s8 l8"><input id="friend-name${friendId}" type="text" className="validate"/><label for="friend-name">ชื่อ-นามสกุล</label></div><div style="margin-top: -1em" className="input-field col s4 l4"><input id="friend-school${friendId}" type="text" className="validate"/><label for="friend-nick-name">ชื่อเล่น</label></div>`).appendTo(divTarget);
     this.setState({
       friendId: ++friendId,
     })
@@ -81,10 +81,10 @@ export default class RegisterCamp extends React.Component {
     const parentsTel = this.refs.parentsTel.value;
     const approve = "no"
     let friendName = () => {
-      let currentId = this.state.friendId - 1;      
+      let currentId = this.state.friendId - 1;
       let friendGroup = [];
       for( i = currentId; i >= 0; i-- ){
-        let data = $(`#friend-name${i}`).val()+"("+ $(`#friend-nick-name${i}`).val() +")"+" , ";
+        let data = $(`#friend-name${i}`).val()+"("+ $(`#friend-school${i}`).val() +")"+" , ";
         friendGroup.push(data);
       }
       return friendGroup;

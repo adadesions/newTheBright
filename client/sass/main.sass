@@ -496,7 +496,6 @@ html
   font-size: 24px
   margin-bottom: 0 !important
 .menu-khonkaen
-  width: 100%
   padding: 1rem
   cursor: pointer
 .menu-khonkaen:hover
@@ -542,6 +541,25 @@ html
   padding: 1rem !important
 i.approve-icon
   color: #8bc34a
+
+// Profile
+.ind-profile
+  padding-top: 13rem
+  padding-bottom: 3rem
+  display: flex
+  justify-content: center
+  background: url('/images/mainpage/bg-pl.jpg')
+.ind-profile-detail
+  width: 40%
+  border-radius: 0.5rem
+  padding: 1rem
+  background-color: rgba(255,255,255,0.8)
+  h3
+    text-align: center
+  div
+    display: flex
+    justify-content: space-between
+
 /////Responsive/////
 
 $breakpoint-mobile-mini: 350px
@@ -1062,10 +1080,11 @@ $breakpoint-desktop: 1680px
       margin-top: 2rem
     .picker__footer
       margin-top: 7rem
+
   //Admin
   .head-admin
     h3
-      font-size: 5rem
+      font-size: 4rem
   .admin
     .row
       margin-bottom: 0
@@ -1077,11 +1096,12 @@ $breakpoint-desktop: 1680px
   .head-admin
     padding-left: 2rem
   .menu-admin
-    padding: 0 !important
-    font-size: 24px
-    margin-bottom: 0 !important
-  .menu-khonkaen
     width: 100%
+    display: flex
+    justify-content: space-around
+    border-bottom: 1px solid #000
+    border-top: 1px solid #000
+  .menu-khonkaen
     padding: 1rem
     cursor: pointer
     font-size: 3rem
@@ -1112,24 +1132,30 @@ $breakpoint-desktop: 1680px
     padding: 2rem
   .approve-btn
     a
-      width: 2rem !important
-      height: 2rem !important
+      width: 3.5rem !important
+      height: 3.5rem !important
       margin: 0.2rem
+      padding-left: 0.5rem
       i
-        line-height: 2rem !important
-        font-size: 1.3rem !important
+        line-height: 3.2rem !important
+        font-size: 2.5rem !important
   .remove-btn
     a
-      width: 2rem !important
-      height: 2rem !important
+      width: 3.5rem !important
+      height: 3.5rem !important
       margin: 0.2rem
+      padding-left: 0.4rem
       i
-        line-height: 2rem !important
-        font-size: 1.3rem !important
+        line-height: 3.4rem !important
+        font-size: 2.5rem !important
+  i.approve-icon
+      line-height: 3.4rem !important
+      font-size: 3.5rem !important
   .list-student
     padding: 1rem !important
     h5
-      font-size: 5rem
+      font-size: 3rem
+      margin-bottom: 2rem
   i.approve-icon
     color: #8bc34a
 /////mobile small/////
