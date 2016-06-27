@@ -242,6 +242,13 @@ html
 .register-page
   background: url('/images/mainpage/bg3.jpg')
   background-size: cover
+  img
+    width: 100%
+  .how-to-register
+    padding-top: 12rem
+    margin-bottom: 0
+    padding-left: 5rem
+    padding-right: 5rem
   label
     color: #000
   .form-section
@@ -444,17 +451,28 @@ html
   padding-top: 10em
 
 // Course
+.items-course
+  background: url('/images/mainpage/bg-pl.jpg')
+  background-size: cover
 .course-page.parallax-container
   height: 100%
-  margin-bottom: 0
+  margin-bottom: -20px
 .header-course
   padding-top: 14em
   display: flex
   justify-content: center
+  padding-left: 5rem
+  padding-right: 5rem
+  img
+    width: 100%
 .poster-course
   padding-top: 2em
   display: flex
   justify-content: center
+  padding-left: 5rem
+  padding-right: 5rem
+  img
+    width: 100%
 .item-menu-course
   display: flex
   justify-content: center
@@ -898,9 +916,12 @@ $breakpoint-desktop: 1680px
     background-size: cover
   .container-smart-child
     height: 85vh
-    padding-top: 24%
     background: url('/images/mainpage/bg-pl.jpg')
     background-size: cover
+    .section-slide
+      background: none
+    .smart-child
+      padding-top: 15% !important
   .the-best-tutors
     height: 85vh
     display: flex
@@ -1022,6 +1043,16 @@ $breakpoint-desktop: 1680px
       height: 2.5em
       font-size: 30px
       line-height: 2.5em
+  // Profile
+  .ind-profile
+    padding-top: 23%
+    padding-bottom: 5%
+  .ind-profile-detail
+    width: 60%
+    h3
+      font-size: 60px
+    h5
+      font-size: 45px
   // Upload transcript page
   .upload-transcript-page
     .head-form
@@ -1104,6 +1135,21 @@ $breakpoint-desktop: 1680px
       margin-top: 2rem
     .picker__footer
       margin-top: 7rem
+  // Search
+  .search-page
+    padding-bottom: 75%
+  .search-bar
+    input
+      font-size: 30px
+    a
+      width: 4rem !important
+      height: 4rem !important
+      margin: 0.5rem
+      i
+        line-height: 3.8rem !important
+        font-size: 3rem !important
+  .btn-search
+    padding-left: 3rem !important
 
   //Admin
   .head-admin

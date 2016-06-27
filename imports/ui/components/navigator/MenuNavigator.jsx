@@ -82,18 +82,30 @@ export default class MenuNavigator extends React.Component {
 
   onClickCourseM4() {
     FlowRouter.go('coursem4');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
   }
 
   onClickCourseM5() {
     FlowRouter.go('coursem5');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
   }
 
   onClickCourseCoachMe() {
     FlowRouter.go('coursecoachme');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
   }
 
   onClickCheck() {
     FlowRouter.go('search');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
   }
 
   render() {
@@ -128,7 +140,7 @@ export default class MenuNavigator extends React.Component {
                 <li onClick={this.onClickRegister}><a className="button-right" href="">ขั้นตอนการสมัคร</a></li>
                 <li onClick={this.onClickUploadTranscript}><a className="button-right" href="">แจ้งการชำระเงิน</a></li>
                 <li onClick={this.onClickCheck}><a className="button-right" href="">ตรวจสอบรายชื่อ</a></li>
-                <li><a className="button-right" href="">ดาวน์โหลดใบชำระเงิน</a></li>
+                <li><a className="button-right" href="http://thebright.in.th/pdf/pay.pdf">ดาวน์โหลดใบชำระเงิน</a></li>
               <li onClick={this.onClickGallery}><a id="gallery" className="button-left" href="">ภาพประทับใจ</a></li>
               <li onClick={this.onClickContact}><a id="contact" className="button-left" href="">ติดต่อเรา</a></li>
             </ul>
@@ -152,7 +164,7 @@ export default class MenuNavigator extends React.Component {
           <li onClick={this.onClickRegister}><a href="">ขั้นตอนการสมัคร</a></li>
           <li onClick={this.onClickUploadTranscript}><a href="">แจ้งการชำระเงิน</a></li>
           <li onClick={this.onClickCheck}><a href="">ตรวจสอบรายชื่อ</a></li>
-          <li><a href="">ดาวน์โหลดใบชำระเงิน</a></li>
+          <li><a href="http://thebright.in.th/pdf/pay.pdf">ดาวน์โหลดใบชำระเงิน</a></li>
         </ul>
       </div>
     )

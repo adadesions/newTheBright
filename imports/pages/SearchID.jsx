@@ -45,11 +45,11 @@ export default class SearchID extends React.Component {
     return(
       <div className="search-page">
         <div className="row search-container">
-          <div className="col l12 search-bar">
-            <div className="input-field col l11">
+          <div className="col l12 s12 search-bar">
+            <div className="input-field col l11 s10">
               <input id="search" ref="search" type="text" className="validate"/>
             </div>
-            <div className="col l1 btn-search">
+            <div className="col l1 s2 btn-search">
               <a onClick={this.onClickSearch} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">search</i></a>
             </div>
           </div>
