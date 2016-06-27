@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createContainer } from 'meteor/react-meteor-data';
 
 // Components
 import Navigator from '../ui/components/navigator/Navigator.jsx';
@@ -62,6 +63,7 @@ export default class RegisterCamp extends React.Component {
 	}
 
   onClickRegister() {
+    const _id = this.props.tb_id;
     const province = this.props.province;
     const prefix = this.refs.prefix.value;
     const fullName = this.refs.fullName.value;
@@ -91,6 +93,7 @@ export default class RegisterCamp extends React.Component {
     }
 
     const students = {
+      _id,
       province,
       prefix,
       fullName,
@@ -112,13 +115,13 @@ export default class RegisterCamp extends React.Component {
       friendName: friendName()
     }
 
-    Students.insert(students);
-    if(this.state.friendId < 1){
-      FlowRouter.go('profile');
-    }
-    else{
-      FlowRouter.go('groupprofile');
-    }
+    // Students.insert(students);
+    // if(this.state.friendId < 1){
+    //   FlowRouter.go('profile');
+    // }
+    // else{
+    //   FlowRouter.go('groupprofile');
+    // }
   }
 
   render() {

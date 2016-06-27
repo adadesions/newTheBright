@@ -9,6 +9,14 @@ import DetailStudent from '../../ui/components/profile/DetailStudent.jsx';
 
 export default class IndividualProfile extends React.Component {
 
+  componentDidMount() {
+    $(document).ready(function(){
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+    });
+  }
+
   renderListStudent() {
     return this.props.students.map((students) => (
       <DetailStudent key={students._id} students={students} />
@@ -26,6 +34,6 @@ export default class IndividualProfile extends React.Component {
 
 export default createContainer(() => {
   return {
-    students: Students.find({"_id": "ZePaa4wJuYje8aCSf"}).fetch(),
+    students: Students.find({"_id": "TBK"}).fetch(),
   };
 }, IndividualProfile);

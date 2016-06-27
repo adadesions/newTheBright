@@ -20,7 +20,11 @@ export default class SearchID extends React.Component {
       $('.collapsible').collapsible({
         accordion : false
       });
-    });
+
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+    })
   }
 
   onClickSearch() {

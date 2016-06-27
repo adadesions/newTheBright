@@ -9,6 +9,14 @@ import DetailGroupStudents from '../../ui/components/profile/DetailGroupStudents
 
 export default class GroupProfile extends React.Component {
 
+  componentDidMount() {
+    $(document).ready(function(){
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+    });
+  }
+
   renderListStudent() {
     return this.props.students.map((students) => (
       <DetailGroupStudents key={students._id} students={students} />
@@ -26,6 +34,6 @@ export default class GroupProfile extends React.Component {
 
 export default createContainer(() => {
   return {
-    students: Students.find({"_id": "oZSpe26gCauHEcgKX"}).fetch(),
+    students: Students.find({"_id": "TBK"}).fetch(),
   };
 }, GroupProfile);

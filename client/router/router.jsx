@@ -80,7 +80,8 @@ mainRouter.route('/hatyai', {
   name: 'registerhatyai',
   action() {
     mount(RegisterCamp,{
-      province: "hatyai"
+      province: "hatyai",
+      tb_id: "TBH"
     });
   },
 });
@@ -89,7 +90,8 @@ mainRouter.route('/khonkaen', {
   name: 'registerkhonkaen',
   action() {
     mount(RegisterCamp, {
-      province: "khonkaen"
+      province: "khonkaen",
+      tb_id: "TBK"
     });
   },
 });
@@ -98,7 +100,8 @@ mainRouter.route('/phitsanulok', {
   name: 'registerphitsanulok',
   action() {
     mount(RegisterCamp, {
-      province: "phitsanulok"
+      province: "phitsanulok",
+      tb_id: "TBP"
     });
   },
 });
