@@ -81,7 +81,7 @@ export default class RegisterCamp extends React.Component {
     const parentsTel = this.refs.parentsTel.value;
     const approve = "no"
     let friendName = () => {
-      let currentId = this.state.friendId - 1;      
+      let currentId = this.state.friendId - 1;
       let friendGroup = [];
       for( i = currentId; i >= 0; i-- ){
         let data = $(`#friend-name${i}`).val()+"("+ $(`#friend-nick-name${i}`).val() +")"+" , ";
