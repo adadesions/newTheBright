@@ -13,7 +13,7 @@ const styleBoxAddFriend = {
   width: '60%',
 }
 
-export default class RegisterCamp extends React.Component {
+class RegisterCamp extends React.Component {
   constructor(props) {
     super(props);
     this.onClickRegister = this.onClickRegister.bind(this);
@@ -62,8 +62,18 @@ export default class RegisterCamp extends React.Component {
     }
 	}
 
+  generateTBID() {
+    const zeroDigits = ['00000', '0000', '000', '00', '0', ''];
+    const prefixCode = this.props.tb_id;
+    const order = this.props.totalStudents + 1;
+    const orderLen = order.toString().length - 1;
+    const newTBID = `${prefixCode}${zeroDigits[orderLen]}${order}`;
+    return newTBID;
+  }
+
+
   onClickRegister() {
-    const _id = this.props.tb_id;
+    const tb_id = this.generateTBID();
     const province = this.props.province;
     const prefix = this.refs.prefix.value;
     const fullName = this.refs.fullName.value;
@@ -86,14 +96,18 @@ export default class RegisterCamp extends React.Component {
       let currentId = this.state.friendId - 1;
       let friendGroup = [];
       for( i = currentId; i >= 0; i-- ){
-        let data = $(`#friend-name${i}`).val()+"("+ $(`#friend-school${i}`).val() +")"+" , ";
+        let data = {
+          stbid: tb_id + String.fromCharCode(65 + i),
+          name: $(`#friend-name${i}`).val(),
+          school: $(`#friend-school${i}`).val()
+        };
         friendGroup.push(data);
       }
       return friendGroup;
     }
 
     const students = {
-      _id,
+      tb_id,
       province,
       prefix,
       fullName,
@@ -113,9 +127,8 @@ export default class RegisterCamp extends React.Component {
       parentsTel,
       approve,
       friendName: friendName()
-    }
-
-    // Students.insert(students);
+    }    
+    Students.insert(students);
     // if(this.state.friendId < 1){
     //   FlowRouter.go('profile');
     // }
@@ -263,3 +276,11 @@ export default class RegisterCamp extends React.Component {
     )
   }
 }
+
+export default createContainer(() => {
+  const totalStudents = Students.find().fetch().length;
+  return {
+    totalStudents,
+  }
+},
+RegisterCamp);
