@@ -26,6 +26,7 @@ import CourseCoachMe from '../../imports/pages/course/CourseCoachMe.jsx';
 import IndividualProfile from '../../imports/pages/profile/IndividualProfile.jsx';
 import GroupProfile from '../../imports/pages/profile/GroupProfile.jsx';
 import SearchID from '../../imports/pages/SearchID.jsx';
+import SmartPass from '../../imports/ui/components/smartpass/SmartPass.jsx';
 
 const landingRouter = FlowRouter.group({
   name: 'thebright',
@@ -81,7 +82,7 @@ mainRouter.route('/hatyai', {
   action() {
     mount(RegisterCamp,{
       province: "hatyai",
-      tb_id: "TBH"
+      tb_id: "TBHY"
     });
   },
 });
@@ -91,7 +92,7 @@ mainRouter.route('/khonkaen', {
   action() {
     mount(RegisterCamp, {
       province: "khonkaen",
-      tb_id: "TBK"
+      tb_id: "TBKK"
     });
   },
 });
@@ -101,7 +102,7 @@ mainRouter.route('/phitsanulok', {
   action() {
     mount(RegisterCamp, {
       province: "phitsanulok",
-      tb_id: "TBP"
+      tb_id: "TBPS"
     });
   },
 });
@@ -220,6 +221,15 @@ mainRouter.route('/search', {
   action() {
     mount(Container, {
       content: <SearchID />,
+    });
+  },
+});
+
+mainRouter.route('/smartpass', {
+  name: 'smartpass',
+  action() {
+    mount(Container, {
+      content: <SmartPass />,
     });
   },
 });

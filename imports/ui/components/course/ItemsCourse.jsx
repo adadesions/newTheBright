@@ -13,19 +13,19 @@ export default class ItemsCourse extends React.Component {
         </div>
         <div className="row">
           <div className="col s6 l3 item-menu-course">
-            <a href=""><img className="z-depth-1" src="/images/course/regis-btn.png"/></a>
+            <a href=""><img src="/images/course/regis-btn.png"/></a>
             <span>Register</span>
           </div>
           <div className="col s6 l3 item-menu-course">
-            <a href=""><img className="z-depth-1" src="/images/course/print-btn.png"/></a>
+            <a href=""><img src="/images/course/print-btn.png"/></a>
             <span>Print Bill</span>
           </div>
           <div className="col s6 l3 item-menu-course">
-            <a href=""><img className="z-depth-1" src="/images/course/pay-btn.png"/></a>
+            <a href=""><img src="/images/course/pay-btn.png"/></a>
             <span>Pay</span>
           </div>
           <div className="col s6 l3 item-menu-course">
-            <a href=""><img className="z-depth-1" src="/images/course/acc-btn.png"/></a>
+            <a href=""><img src="/images/course/acc-btn.png"/></a>
             <span>Accomodation</span>
           </div>
         </div>

@@ -14,13 +14,10 @@ export default class MainPage extends React.Component {
       if(screen.width > 1000){
         $('.parallax').parallax();
       }
-    });
 
-    $(document).ready(function(){
       $('body,html').animate({
         scrollTop: 0
       }, 800);
-      return false;
     });
   }
 

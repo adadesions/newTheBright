@@ -242,6 +242,13 @@ html
 .register-page
   background: url('/images/mainpage/bg3.jpg')
   background-size: cover
+  img
+    width: 100%
+  .how-to-register
+    padding-top: 12rem
+    margin-bottom: 0
+    padding-left: 5rem
+    padding-right: 5rem
   label
     color: #000
   .form-section
@@ -444,17 +451,28 @@ html
   padding-top: 10em
 
 // Course
+.items-course
+  background: url('/images/mainpage/bg-pl.jpg')
+  background-size: cover
 .course-page.parallax-container
   height: 100%
-  margin-bottom: 0
+  margin-bottom: -20px
 .header-course
   padding-top: 14em
   display: flex
   justify-content: center
+  padding-left: 5rem
+  padding-right: 5rem
+  img
+    width: 100%
 .poster-course
   padding-top: 2em
   display: flex
   justify-content: center
+  padding-left: 5rem
+  padding-right: 5rem
+  img
+    width: 100%
 .item-menu-course
   display: flex
   justify-content: center
@@ -584,6 +602,75 @@ i.approve-icon
   display: flex
   align-items: center
   height: 5rem
+
+
+// Smartpass
+.smart-pass
+  padding-top: 13.2rem
+.smart-item
+  height: 25rem
+  background: url('/images/smartpass/bg.jpg')
+  background-size: cover
+.qr-code-img
+  display: flex
+  align-items: center
+  height: 100%
+  img
+    width: 100%
+.smart-pass-detail
+  text-align: center
+  .detail
+    padding-top: 1rem
+    i
+      font-size: 4rem
+.tb-id-smartpass
+  display: flex
+  justify-content: flex-end
+  padding-top: 1rem
+.smart-pass-name
+  display: flex
+  justify-content: center
+  h4
+    width: 40%
+.smart-pass-school
+  display: flex
+  justify-content: center
+  h4
+    width: 40%
+.print-btn
+  display: flex
+  justify-content: flex-end
+  padding-bottom: 1rem
+  padding-right: 1rem
+
+// @media print
+//   .smart-pass
+//     padding-top: 14rem
+//   .smart-item
+//     height: 25rem
+//     background: url('/images/smartpass/bg.jpg')
+//     background-size: cover
+//   .qr-code-img
+//     display: flex
+//     align-items: center
+//     height: 100%
+//     img
+//       width: 100%
+//   .smart-pass-detail
+//     text-align: center
+//     .detail
+//       padding-top: 1rem
+//       i
+//         font-size: 4rem
+//   .tb-id-smartpass
+//     display: flex
+//     justify-content: flex-end
+//     padding-top: 1rem
+//   .smart-pass-name, .smart-pass-school
+//     display: flex
+//     justify-content: center
+//     h4
+//       width: 40%
 /////Responsive/////
 
 $breakpoint-mobile-mini: 350px
@@ -898,9 +985,12 @@ $breakpoint-desktop: 1680px
     background-size: cover
   .container-smart-child
     height: 85vh
-    padding-top: 24%
     background: url('/images/mainpage/bg-pl.jpg')
     background-size: cover
+    .section-slide
+      background: none
+    .smart-child
+      padding-top: 15% !important
   .the-best-tutors
     height: 85vh
     display: flex
@@ -1022,6 +1112,16 @@ $breakpoint-desktop: 1680px
       height: 2.5em
       font-size: 30px
       line-height: 2.5em
+  // Profile
+  .ind-profile
+    padding-top: 23%
+    padding-bottom: 5%
+  .ind-profile-detail
+    width: 60%
+    h3
+      font-size: 60px
+    h5
+      font-size: 45px
   // Upload transcript page
   .upload-transcript-page
     .head-form
@@ -1104,6 +1204,21 @@ $breakpoint-desktop: 1680px
       margin-top: 2rem
     .picker__footer
       margin-top: 7rem
+  // Search
+  .search-page
+    padding-bottom: 75%
+  .search-bar
+    input
+      font-size: 30px
+    a
+      width: 4rem !important
+      height: 4rem !important
+      margin: 0.5rem
+      i
+        line-height: 3.8rem !important
+        font-size: 3rem !important
+  .btn-search
+    padding-left: 3rem !important
 
   //Admin
   .head-admin
@@ -1182,6 +1297,32 @@ $breakpoint-desktop: 1680px
       margin-bottom: 2rem
   i.approve-icon
     color: #8bc34a
+
+  // Smartpass
+  .smart-pass
+    padding-top: 13.2rem
+    padding-bottom: 87%
+  .smart-pass-name
+    display: flex
+    justify-content: center
+    h4
+      width: 60%
+  .smart-pass-school
+    display: flex
+    justify-content: center
+    h4
+      width: 60%
+  .print-btn
+    display: flex
+    justify-content: flex-end
+    padding-bottom: 1rem
+    padding-right: 1rem
+    padding-left: 1rem
+    a
+      width: 100%
+      height: 5rem
+      font-size: 40px
+      line-height: 5rem
 /////mobile small/////
 @media only screen and (min-device-width: 100px) and (max-device-width: $breakpoint-mobile-mini)
   .navigator
