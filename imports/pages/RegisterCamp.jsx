@@ -56,9 +56,9 @@ class RegisterCamp extends React.Component {
   }
 
   checkNum(e){
-    if (isNaN(this.refs.pinCode.value)){
+    if (isNaN(this.refs.idCard.value)){
       Materialize.toast('กรุณาใส่ตัวเลข', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
-      this.refs.pinCode.value = '';
+      this.refs.idCard.value = '';
     }
 	}
 
@@ -77,7 +77,7 @@ class RegisterCamp extends React.Component {
     const province = this.props.province;
     const prefix = this.refs.prefix.value;
     const fullName = this.refs.fullName.value;
-    const pinCode = this.refs.pinCode.value;
+    const idCard = this.refs.idCard.value;
     const nickName = this.refs.nickName.value;
     const birthday = this.refs.birthday.value;
     const schoolName = this.refs.schoolName.value;
@@ -111,7 +111,7 @@ class RegisterCamp extends React.Component {
       province,
       prefix,
       fullName,
-      pinCode,
+      idCard,
       nickName,
       birthday,
       schoolName,
@@ -127,7 +127,7 @@ class RegisterCamp extends React.Component {
       parentsTel,
       approve,
       friendName: friendName()
-    }    
+    }
     Students.insert(students);
     // if(this.state.friendId < 1){
     //   FlowRouter.go('profile');
@@ -164,7 +164,7 @@ class RegisterCamp extends React.Component {
                 <label for="name">ชื่อ-นามสกุล</label>
               </div>
               <div className="input-field col s12 l4">
-                <input onKeyDown={this.checkNum} ref="pinCode" id="pin-code" type="text" className="validate" maxLength="13"/>
+                <input onKeyDown={this.checkNum} ref="idCard" id="pin-code" type="text" className="validate" maxLength="13"/>
                 <label for="pin-code">เลขประจำตัวประชาชน</label>
               </div>
               <div className="input-field col s12 l6">

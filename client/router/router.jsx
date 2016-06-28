@@ -197,11 +197,11 @@ mainRouter.route('/courseCoachMe', {
   },
 });
 
-mainRouter.route('/profile', {
+mainRouter.route('/profile/:tb_id', {
   name: 'profile',
-  action() {
+  action(params) {
     mount(Container, {
-      content: <IndividualProfile />,
+      content: <IndividualProfile tb_id={params.tb_id} />,
     });
   },
 });
