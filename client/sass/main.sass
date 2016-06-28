@@ -602,6 +602,75 @@ i.approve-icon
   display: flex
   align-items: center
   height: 5rem
+
+
+// Smartpass
+.smart-pass
+  padding-top: 13.2rem
+.smart-item
+  height: 25rem
+  background: url('/images/smartpass/bg.jpg')
+  background-size: cover
+.qr-code-img
+  display: flex
+  align-items: center
+  height: 100%
+  img
+    width: 100%
+.smart-pass-detail
+  text-align: center
+  .detail
+    padding-top: 1rem
+    i
+      font-size: 4rem
+.tb-id-smartpass
+  display: flex
+  justify-content: flex-end
+  padding-top: 1rem
+.smart-pass-name
+  display: flex
+  justify-content: center
+  h4
+    width: 40%
+.smart-pass-school
+  display: flex
+  justify-content: center
+  h4
+    width: 40%
+.print-btn
+  display: flex
+  justify-content: flex-end
+  padding-bottom: 1rem
+  padding-right: 1rem
+
+// @media print
+//   .smart-pass
+//     padding-top: 14rem
+//   .smart-item
+//     height: 25rem
+//     background: url('/images/smartpass/bg.jpg')
+//     background-size: cover
+//   .qr-code-img
+//     display: flex
+//     align-items: center
+//     height: 100%
+//     img
+//       width: 100%
+//   .smart-pass-detail
+//     text-align: center
+//     .detail
+//       padding-top: 1rem
+//       i
+//         font-size: 4rem
+//   .tb-id-smartpass
+//     display: flex
+//     justify-content: flex-end
+//     padding-top: 1rem
+//   .smart-pass-name, .smart-pass-school
+//     display: flex
+//     justify-content: center
+//     h4
+//       width: 40%
 /////Responsive/////
 
 $breakpoint-mobile-mini: 350px
@@ -1228,6 +1297,32 @@ $breakpoint-desktop: 1680px
       margin-bottom: 2rem
   i.approve-icon
     color: #8bc34a
+
+  // Smartpass
+  .smart-pass
+    padding-top: 13.2rem
+    padding-bottom: 87%
+  .smart-pass-name
+    display: flex
+    justify-content: center
+    h4
+      width: 60%
+  .smart-pass-school
+    display: flex
+    justify-content: center
+    h4
+      width: 60%
+  .print-btn
+    display: flex
+    justify-content: flex-end
+    padding-bottom: 1rem
+    padding-right: 1rem
+    padding-left: 1rem
+    a
+      width: 100%
+      height: 5rem
+      font-size: 40px
+      line-height: 5rem
 /////mobile small/////
 @media only screen and (min-device-width: 100px) and (max-device-width: $breakpoint-mobile-mini)
   .navigator

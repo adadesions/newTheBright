@@ -26,6 +26,7 @@ import CourseCoachMe from '../../imports/pages/course/CourseCoachMe.jsx';
 import IndividualProfile from '../../imports/pages/profile/IndividualProfile.jsx';
 import GroupProfile from '../../imports/pages/profile/GroupProfile.jsx';
 import SearchID from '../../imports/pages/SearchID.jsx';
+import SmartPass from '../../imports/ui/components/smartpass/SmartPass.jsx';
 
 const landingRouter = FlowRouter.group({
   name: 'thebright',
@@ -220,6 +221,15 @@ mainRouter.route('/search', {
   action() {
     mount(Container, {
       content: <SearchID />,
+    });
+  },
+});
+
+mainRouter.route('/smartpass', {
+  name: 'smartpass',
+  action() {
+    mount(Container, {
+      content: <SmartPass />,
     });
   },
 });
