@@ -3,6 +3,10 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 // Collection
 import { Students } from '../../../api/Students.js';
+
+// Components
+import FriendNameAdmin from './FriendNameAdmin.jsx';
+
 export default class StudentItems extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +23,12 @@ export default class StudentItems extends React.Component {
 
   onClickRemove() {
     Students.remove({ "_id" : this.props.names._id })
+  }
+
+  renderFriend() {
+    return this.props.names.friendName.map((friendname) => {
+      return <FriendNameAdmin key={friendname.stbid} friendname={friendname}  />
+    })
   }
 
   render() {
@@ -45,7 +55,7 @@ export default class StudentItems extends React.Component {
           <div>อีเมล์ : {this.props.names.email}</div>
           <div>ชื่อผู้ปกครอง : {this.props.names.parentsName}</div>
           <div>เบอร์โทรผู้ปกครอง : {this.props.names.parentsTel}</div>
-          <div>ชื่อเพื่อนในกลุ่ม : {this.props.names.friendName}</div>
+          <div>ชื่อเพื่อนในกลุ่ม {this.renderFriend()}</div>
         </div>
       </li>
     )

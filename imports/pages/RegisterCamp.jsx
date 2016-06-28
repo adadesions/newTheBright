@@ -129,12 +129,12 @@ class RegisterCamp extends React.Component {
       friendName: friendName()
     }
     Students.insert(students);
-    // if(this.state.friendId < 1){
-    //   FlowRouter.go('profile');
-    // }
-    // else{
-    //   FlowRouter.go('groupprofile');
-    // }
+    if(this.state.friendId < 1){
+      FlowRouter.go('profile/'+ tb_id +'');
+    }
+    else{
+      FlowRouter.go('groupprofile/'+ tb_id +'');
+    }
   }
 
   render() {
@@ -255,8 +255,8 @@ class RegisterCamp extends React.Component {
                       <p>ยืนยันการสมัคร ?</p>
                     </div>
                     <div className="modal-footer">
-                      <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">DISAGREE</a>
-                      <a onClick={this.onClickRegister} href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">AGREE</a>
+                      <a href="" className="modal-action modal-close waves-effect waves-green btn-flat">DISAGREE</a>
+                      <a onClick={this.onClickRegister} href="" className="modal-action modal-close waves-effect waves-green btn-flat">AGREE</a>
                     </div>
                   </div>
                 </div>

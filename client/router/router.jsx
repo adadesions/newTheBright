@@ -207,11 +207,11 @@ mainRouter.route('/profile/:tb_id', {
   },
 });
 
-mainRouter.route('/groupprofile', {
+mainRouter.route('/groupprofile/:tb_id', {
   name: 'groupprofile',
-  action() {
+  action(params) {
     mount(Container, {
-      content: <GroupProfile />,
+      content: <GroupProfile tb_id={params.tb_id} />,
     });
   },
 });

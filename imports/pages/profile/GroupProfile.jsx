@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 
 // Collection
@@ -17,23 +17,29 @@ export default class GroupProfile extends React.Component {
     });
   }
 
-  renderListStudent() {
-    return this.props.students.map((students) => (
-      <DetailGroupStudents key={students._id} students={students} />
-    ));
+  renderListStudent(student) {
+    if( student ){
+      return <DetailGroupStudents student={student} />
+    }
   }
 
   render() {
     return(
       <div className="ind-profile">
-        {this.renderListStudent()}
+        { this.renderListStudent(this.props.student) }
       </div>
     )
   }
 }
 
-export default createContainer(() => {
+GroupProfile.propsTypes = {
+  tb_id: PropTypes.string.isRequired,
+}
+
+export default createContainer((props) => {
+  const params = props.tb_id;
+  let student = Students.findOne({'tb_id': params});
   return {
-    students: Students.find({"_id": "TBK"}).fetch(),
+    student,
   };
 }, GroupProfile);
