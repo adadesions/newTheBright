@@ -8,6 +8,11 @@ import { Students } from '../../../api/Students.js';
 import FriendName from './FriendName.jsx';
 
 export default class DetailStudent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.printSmart = this.printSmart.bind(this);
+    this.renderFriend = this.renderFriend.bind(this);
+  }
 
   renderFriend() {
     return this.props.student.friendName.map((friend) => {
@@ -15,11 +20,16 @@ export default class DetailStudent extends React.Component {
     })
   }
 
+  printSmart() {
+    FlowRouter.go('/profile/smartpass/'+ this.props.student.tb_id +'');
+  }
+
+
   render() {
     return(
       <div className="ind-profile-detail">
         <h3>ข้อมูลกลุ่ม</h3>
-        <div><h5>ชื่อ :</h5> <h5>{this.props.student.fullName}</h5></div>
+        <div><h5>ชื่อ :</h5> <h5>{this.props.student.fullName}</h5> <a onClick={this.printSmart} href="">Print</a></div>
         <div><h5>ชื่อเพื่อน : </h5><h5>{this.renderFriend()}</h5></div>
         <div><h5>จังหวัด :</h5> <h5>{this.props.student.province}</h5></div>
         <div><h5>โรงเรียน :</h5> <h5>{this.props.student.schoolName}</h5></div>

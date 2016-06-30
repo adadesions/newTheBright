@@ -131,9 +131,11 @@ class RegisterCamp extends React.Component {
     Students.insert(students);
     if(this.state.friendId < 1){
       FlowRouter.go('profile/'+ tb_id +'');
+      window.location.reload();
     }
     else{
       FlowRouter.go('groupprofile/'+ tb_id +'');
+      window.location.reload();
     }
   }
 

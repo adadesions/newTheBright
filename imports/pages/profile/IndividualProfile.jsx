@@ -20,7 +20,7 @@ export default class IndividualProfile extends React.Component {
   renderListStudent(student) {
     if( student ){
       return <DetailStudent student={student} />
-    }    
+    }
   }
 
   render() {

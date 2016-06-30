@@ -225,11 +225,11 @@ mainRouter.route('/search', {
   },
 });
 
-mainRouter.route('/smartpass', {
+mainRouter.route('/profile/smartpass/:tb_id', {
   name: 'smartpass',
-  action() {
+  action(params) {
     mount(Container, {
-      content: <SmartPass />,
+      content: <SmartPass tb_id={params.tb_id} />,
     });
   },
 });

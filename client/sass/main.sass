@@ -646,8 +646,11 @@ i.approve-icon
   justify-content: flex-end
   padding-bottom: 1rem
   padding-right: 1rem
+.qr-code-img
+  canvas
+    display: none
 
-@media only print and (min-width: 0)
+@media only print and (max-device-width: 1366px)
   *
     -webkit-print-color-adjust: exact
     print-color-adjust: exact
@@ -659,7 +662,7 @@ i.approve-icon
     color: #fff
   #detail-print
     position: absolute
-    top: 3rem
+    top: 20%
     left: 0
     width: 100%
   .qr-code-img
@@ -667,7 +670,6 @@ i.approve-icon
     align-items: center
     height: 25rem
     width: 16.66667%
-    margin-top: 2rem
     margin-left: auto
     left: auto
     right: auto
@@ -675,12 +677,12 @@ i.approve-icon
     display: flex
     align-items: center
     text-align: center
+    padding-left: -5%
     width: 66.66667%
-    padding-left: 10rem !important
     h3
       margin-top: 0
       font-size: 65px
-      width: 230%
+      width: 200%
     .detail
       padding-top: 0
       i
@@ -689,13 +691,13 @@ i.approve-icon
     display: flex
     justify-content: flex-end
     padding-top: 1rem
-    width: 230%
+    width: 200%
     h5
       font-size: 57px
   .smart-pass-name, .smart-pass-school
     display: flex
     justify-content: center
-    width: 230%
+    width: 200%
     padding-top: 0.5rem
     h4
       font-size: 55px
@@ -706,6 +708,74 @@ i.approve-icon
     margin-left: auto
     left: auto
     right: auto
+
+  #img-qr
+    margin-left: 3rem
+    width: 500%
+    height: auto
+@media only print and (max-device-width: 1280px)
+  *
+    -webkit-print-color-adjust: exact
+    print-color-adjust: exact
+  .smart-item
+    position: relative
+    display: list-item
+    list-style-image: url('/images/smartpass/bg-print.png')
+    list-style-position: inside
+    color: #fff
+  #detail-print
+    position: absolute
+    top: 20%
+    left: 0
+    width: 100%
+  .qr-code-img
+    display: flex
+    align-items: center
+    height: 25rem
+    width: 16.66667%
+    margin-left: auto
+    left: auto
+    right: auto
+  .smart-pass-detail
+    display: flex
+    align-items: center
+    text-align: center
+    padding-left: -5%
+    width: 66.66667%
+    h3
+      margin-top: 0
+      font-size: 65px
+      width: 200%
+    .detail
+      padding-top: 0
+      i
+        font-size: 5rem
+  .tb-id-smartpass
+    display: flex
+    justify-content: flex-end
+    padding-top: 1rem
+    width: 200%
+    h5
+      font-size: 57px
+  .smart-pass-name, .smart-pass-school
+    display: flex
+    justify-content: center
+    width: 200%
+    padding-top: 0.5rem
+    h4
+      font-size: 55px
+      margin-top: 0.3rem
+
+  .smart-pass-other
+    width: 16.66667%
+    margin-left: auto
+    left: auto
+    right: auto
+
+  #img-qr
+    margin-left: 3rem
+    width: 200%
+    height: auto
 /////Responsive/////
 
 $breakpoint-mobile-mini: 350px
