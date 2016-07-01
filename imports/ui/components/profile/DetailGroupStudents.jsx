@@ -29,7 +29,9 @@ export default class DetailStudent extends React.Component {
     return(
       <div className="ind-profile-detail">
         <h3>ข้อมูลกลุ่ม</h3>
-        <div><h5>ชื่อ :</h5> <h5>{this.props.student.fullName}</h5> <a onClick={this.printSmart} href="">Print</a></div>
+        <div><h5>ชื่อ :</h5> <h5>{this.props.student.fullName}</h5>
+        {/*<a onClick={this.printSmart} href="">Print</a>*/}
+        </div>
         <div><h5>ชื่อเพื่อน : </h5><h5>{this.renderFriend()}</h5></div>
         <div><h5>จังหวัด :</h5> <h5>{this.props.student.province}</h5></div>
         <div><h5>โรงเรียน :</h5> <h5>{this.props.student.schoolName}</h5></div>
@@ -43,7 +45,7 @@ export default class DetailStudent extends React.Component {
         <hr/>
         <div><h5>Status :</h5> <h5>{this.props.student.approve}</h5></div>
         <hr/>
-        <div><h5>Checkin :</h5> <h5>{this.props.student.parentsTel}</h5></div>
+        <div><h5>Checkin :</h5> <h5></h5></div>
       </div>
     )
   }

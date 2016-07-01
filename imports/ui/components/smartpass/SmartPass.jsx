@@ -59,6 +59,7 @@ export default class SmartPass extends React.Component {
               <div className="col s2 l2 qr-code-img">
                 <QRCode
                   value={`http://023ecd75.ngrok.io/profile/${this.props.tb_id}`}
+                  //value={`http://www.thebrightacademy.com/profile/${this.props.tb_id}`}
                   size={180}
                   bgColor={"rgba(255,255,255,0)"}
                   fgColor={"#fff"}
