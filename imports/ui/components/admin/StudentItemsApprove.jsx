@@ -27,12 +27,13 @@ export default class StudentItemsApprove extends React.Component {
   render() {
     return(
       <li>
-        <div className="collapsible-header"><i className="material-icons approve-icon">verified_user</i>{this.props.names.fullName}
+        <div className="collapsible-header"><i className="material-icons approve-icon">verified_user</i>{this.props.names.tb_id}
           <div className="remove-btn">
             <a onClick={this.onClickRemoveApprove} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">delete</i></a>
           </div>
         </div>
         <div className="collapsible-body">
+          <div>ชื่อ : {this.props.names.fullName}</div>
           <div>จังหวัด : {this.props.names.province}</div>
           <div>โรงเรียน : {this.props.names.schoolName}</div>
           <div>ชั้นปี : {this.props.names.sClass}</div>

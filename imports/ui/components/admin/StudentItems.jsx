@@ -39,13 +39,14 @@ export default class StudentItems extends React.Component {
             <a onClick={this.onClickApprove} className="btn-floating btn-large waves-effect waves-light green"><i className="material-icons">spellcheck</i></a>
           </div>
           <div>
-            <i className="material-icons">supervisor_account</i>{this.props.names.fullName}
+            <i className="material-icons">supervisor_account</i>{this.props.names.tb_id}
           </div>
           <div className="remove-btn">
             <a onClick={this.onClickRemove} className="btn-floating btn-large waves-effect waves-light red"><i className="material-icons">delete</i></a>
           </div>
         </div>
         <div className="collapsible-body">
+          <div>ชื่อ : {this.props.names.fullName}</div>
           <div>จังหวัด : {this.props.names.province}</div>
           <div>โรงเรียน : {this.props.names.schoolName}</div>
           <div>ชั้นปี : {this.props.names.sClass}</div>

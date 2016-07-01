@@ -43,6 +43,11 @@ export default class SearchID extends React.Component {
         }
       });
     }
+    else if(!searchId) {
+      return this.props.items.map((item) => {
+          return <SearchItems key={item._id} item={item} />
+      });
+    }
   }
 
   render() {
@@ -68,6 +73,8 @@ export default class SearchID extends React.Component {
 
 export default createContainer(() => {
   return {
-    items: Students.find({}).fetch(),
+    items: Students.find({}, {
+      sort: {tb_id: 1}
+    }).fetch(),
   };
 }, SearchID);

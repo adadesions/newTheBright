@@ -20,7 +20,6 @@ export default class DetailStudent extends React.Component {
     }else {
       return <span className="text-approve">{this.props.student.approve}</span>
     }
-
   }
 
   render() {

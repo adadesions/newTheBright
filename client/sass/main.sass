@@ -595,11 +595,47 @@ i.approve-icon
     justify-content: space-between
     padding-left: 1rem
     padding-right: 1rem
+.group-profile-detail
+  width: 50%
+  border-radius: 0.5rem
+  padding: 1rem
+  background-color: rgba(255,255,255,0.8)
+  hr.line-header
+    margin-left: 6.5rem
+    margin-right: 6.5rem
+    background-color: #f1f1f1
+    opacity: 0.5
+  hr.line-section
+    background-color: #f1f1f1
+    opacity: 0.5
+  h3
+    text-align: center
+  h5
+    font-weight: bold
+  span
+    font-size: 25px
+    line-height: 4rem
+  div
+    display: flex
+    justify-content: space-between
+    padding-left: 1rem
+    padding-right: 1rem
+  .friend-name
+    padding-left: 0 !important
+    padding-right: 0 !important
+    .friend-items
+      padding-left: 0 !important
+      padding-right: 0 !important
 .text-approve
   color: #f44336
 .text-approve.active
   color: #4caf50
-
+.text-approve-group
+  color: #f44336
+  line-height: 1rem
+.text-approve-group.active
+  color: #4caf50
+  line-height: 1rem
 // Search
 .search-page
   background: url('/images/mainpage/bg-pl.jpg')
@@ -624,8 +660,14 @@ i.approve-icon
   display: flex
   align-items: center
   height: 5rem
-
-
+.row-item
+  display: flex
+  flex-flow: row
+  width: 100%
+  .detail-items-student
+    display: flex
+    justify-content: space-between
+    width: 100%
 // Smartpass
 .smart-pass
   padding-top: 13.2rem
@@ -1249,6 +1291,12 @@ $breakpoint-desktop: 1680px
       font-size: 60px
     h5
       font-size: 45px
+  .friend-name
+    padding-left: 0 !important
+    padding-right: 0 !important
+    .friend-items
+      padding-left: 0 !important
+      padding-right: 0 !important
   // Upload transcript page
   .upload-transcript-page
     .head-form

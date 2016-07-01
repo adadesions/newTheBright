@@ -24,8 +24,12 @@ export default class DetailStudent extends React.Component {
     return(
       <li onClick={this.onCLickStudent} className="item-student">
         <div className="collapsible-header">
-          <div>
-            <i className="material-icons">supervisor_account</i>{this.props.item.fullName}
+          <div className="row-item">
+            <i className="material-icons">supervisor_account</i>
+            <div className="detail-items-student">
+              <span>{this.props.item.tb_id}</span>
+              <span>{this.props.item.fullName}</span>
+            </div>
           </div>
         </div>
       </li>
