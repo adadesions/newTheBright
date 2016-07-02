@@ -92,6 +92,10 @@ class RegisterCamp extends React.Component {
     const relation = this.refs.relation.value;
     const parentsTel = this.refs.parentsTel.value;
     const approve = "no"
+    const optionPayment = ""
+    const date = ""
+    const time = ""
+    const amount = ""
     let friendName = () => {
       let currentId = this.state.friendId - 1;
       let friendGroup = [];
@@ -126,6 +130,10 @@ class RegisterCamp extends React.Component {
       relation,
       parentsTel,
       approve,
+      optionPayment,
+      date,
+      time,
+      amount,
       friendName: friendName()
     }
     Students.insert(students);

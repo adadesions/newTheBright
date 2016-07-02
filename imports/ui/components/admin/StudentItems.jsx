@@ -57,6 +57,11 @@ export default class StudentItems extends React.Component {
           <div>ชื่อผู้ปกครอง : {this.props.names.parentsName}</div>
           <div>เบอร์โทรผู้ปกครอง : {this.props.names.parentsTel}</div>
           <div>ชื่อเพื่อนในกลุ่ม {this.renderFriend()}</div>
+          <hr/>
+          <div>ช่องทางการจ่าย : {this.props.names.optionPayment}</div>
+          <div>วันที่จ่าย : {this.props.names.date}</div>
+          <div>เวลาที่จ่าย : {this.props.names.time}</div>
+          <div>จำนวนเงิน : {this.props.names.amount}</div>
         </div>
       </li>
     )
