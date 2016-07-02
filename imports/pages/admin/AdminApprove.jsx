@@ -8,7 +8,7 @@ import { Students } from '../../api/Students.js';
 import StudentItems from '../../ui/components/admin/StudentItems.jsx';
 import StudentItemsApprove from '../../ui/components/admin/StudentItemsApprove.jsx';
 
-export default class Admin extends React.Component {
+export default class AdminApprove extends React.Component {
   constructor(props){
     super(props)
     this.state = {
@@ -23,6 +23,7 @@ export default class Admin extends React.Component {
       $('.collapsible').collapsible({
         accordion : false
       });
+
     });
 
     $('.menu-khonkaen').addClass('active');
@@ -144,4 +145,4 @@ export default createContainer(() => {
     studentsApproveKhonkaen: Students.find({"approve": "yes","province": "khonkaen"}).fetch(),
     studentsApprovePhitsanulok: Students.find({"approve": "yes","province": "phitsanulok"}).fetch(),
   };
-}, Admin);
+}, AdminApprove);

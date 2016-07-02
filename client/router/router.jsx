@@ -8,7 +8,8 @@ import LandingContainer from '../../imports/layouts/LandingContainer.jsx';
 import ContainerAdmin from '../../imports/layouts/ContainerAdmin.jsx';
 
 // Components
-import Admin from '../../imports/pages/admin/Admin.jsx';
+import AdminApprove from '../../imports/pages/admin/AdminApprove.jsx';
+import LoginAdmin from '../../imports/pages/admin/LoginAdmin.jsx';
 import LandingPage from '../../imports/pages/LandingPage.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Register from '../../imports/pages/Register.jsx';
@@ -44,7 +45,16 @@ adminRouter.route('/admin', {
   name: 'adminsite',
   action() {
     mount(ContainerAdmin, {
-      content: <Admin />,
+      content: <LoginAdmin />,
+    });
+  },
+});
+
+adminRouter.route('/admin/approve', {
+  name: 'adminapprove',
+  action() {
+    mount(ContainerAdmin, {
+      content: <AdminApprove/>,
     });
   },
 });
