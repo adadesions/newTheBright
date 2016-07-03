@@ -1,5 +1,7 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+// upload
+import Dropzone from 'react-dropzone';
 
 // Collection
 import { Students } from '../api/Students.js';
@@ -7,7 +9,11 @@ import { Students } from '../api/Students.js';
 export default class UploadTranscript extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      files: [],
+    }
     this.onClickUpload = this.onClickUpload.bind(this);
+    this.onDrop = this.onDrop.bind(this);
   }
 
   componentDidMount() {
@@ -25,6 +31,13 @@ export default class UploadTranscript extends React.Component {
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 15 // Creates a dropdown of 15 years to control year
     });
+
+    var componentConfig = {
+      iconFiletypes: ['.jpg', '.png', '.gif'],
+      showFiletypeIcon: true,
+      postUrl: '/images/slip'
+    };
+
   }
 
   onClickUpload() {
@@ -33,6 +46,8 @@ export default class UploadTranscript extends React.Component {
     const date = this.refs.dateForTranfer.value;
     const time = this.refs.timeForTranfer.value;
     const amount = this.refs.amount.value;
+
+
 
     if(tb_id) {
       return this.props.items.map((item) => {
@@ -54,6 +69,17 @@ export default class UploadTranscript extends React.Component {
     }
 
 
+  }
+
+  onDrop(files) {
+      files.map((file) => {
+        const name = file.name;
+        console.log('Received files: ', file);
+      })
+
+      this.setState({
+        files: files
+      });
   }
 
   render() {
@@ -95,14 +121,15 @@ export default class UploadTranscript extends React.Component {
               <input id="amount" ref="amount" type="number" className="validate"/>
               <label for="amount">จำนวนเงิน</label>
             </div>
-            <div className="file-field input-field col s12 l6">
-              <div className="btn btn-upload-file">
-                <span>File</span>
-                <input type="file"/>
-              </div>
-              <div className="file-path-wrapper">
-                <input className="file-path validate" placeholder="สลิปธนาคาร" type="text"/>
-              </div>
+            <div className="input-field upload-slip col s12 l6">
+              {this.state.files.length > 0 ? <div>
+                <div>{this.state.files.map((file) => <img src={file.preview} /> )}</div>
+                </div> : <Dropzone onDrop={this.onDrop}
+                                   config={this.componentConfig}>
+                  <div>วางรูป หรือ คลิ๊กลงที่นี้ เพื่ออัพโหลดสลิป </div>
+                </Dropzone>
+              }
+
             </div>
             <div className="input-field col s12 l12">
               <div className="col s0 l4"><br/></div>
