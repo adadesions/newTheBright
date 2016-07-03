@@ -109,11 +109,11 @@ export default class UploadTranscript extends React.Component {
               </select>
               <label>ช่องทางการชำระเงิน</label>
             </div>
-            <div className="input-field col s12 l3">
+            <div className="input-field col s12 l6">
               <input id="date-for-tranfer" ref="dateForTranfer" type="date" className="datepicker"/>
               <label for="date-for-tranfer">วันที่ชำระ</label>
             </div>
-            <div className="input-field col s12 l3">
+            <div className="input-field col s12 l6">
               <input id="time-for-tranfer" ref="timeForTranfer" type="text" className="validate"/>
               <label for="time-for-tranfer">เวลาที่ชำระเงิน</label>
             </div>
@@ -121,12 +121,12 @@ export default class UploadTranscript extends React.Component {
               <input id="amount" ref="amount" type="number" className="validate"/>
               <label for="amount">จำนวนเงิน</label>
             </div>
-            <div className="input-field upload-slip col s12 l6">
+            <div className="input-field upload-slip col s12 l12">
               {this.state.files.length > 0 ? <div>
                 <div>{this.state.files.map((file) => <img src={file.preview} /> )}</div>
                 </div> : <Dropzone onDrop={this.onDrop}
                                    config={this.componentConfig}>
-                  <div>วางรูป หรือ คลิ๊กลงที่นี้ เพื่ออัพโหลดสลิป </div>
+                  <div><span>วางรูป หรือ คลิ๊กที่นี้ เพื่ออัพโหลดสลิป</span></div>
                 </Dropzone>
               }
 
