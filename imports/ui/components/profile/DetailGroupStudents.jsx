@@ -37,6 +37,7 @@ export default class DetailStudent extends React.Component {
       <div className="group-profile-detail">
         <h3>ข้อมูลกลุ่ม</h3>
         <hr className="line-header"/>
+        <div><h5>The Bright ID :</h5> <span>{this.props.student.tb_id}</span></div>
         <div><h5>ชื่อ :</h5> <span>{this.props.student.fullName}</span>
         {/*<a onClick={this.printSmart} href="">Print</a>*/}
         </div>

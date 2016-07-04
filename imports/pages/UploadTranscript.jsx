@@ -1,5 +1,6 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+import { $ } from 'meteor/jquery';
 // upload
 import Dropzone from 'react-dropzone';
 
@@ -80,6 +81,7 @@ export default class UploadTranscript extends React.Component {
       files.map((file) => {
         const name = file.name;
         console.log('Received files: ', file);
+
       })
 
       this.setState({
