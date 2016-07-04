@@ -106,11 +106,16 @@ export default class AdminApprove extends React.Component {
 
   }
 
+  onClickLogout() {
+    FlowRouter.go('adminsite');
+  }
+
   render() {
     return(
       <div className="admin">
         <div className="row head-admin">
           <h3>Admin Site</h3>
+          <h5><a onClick={this.onClickLogout} href="">logout</a></h5>
         </div>
         <div className="row">
           <div className="col l2 s12 menu-admin">
