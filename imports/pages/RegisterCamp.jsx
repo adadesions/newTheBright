@@ -287,8 +287,20 @@ class RegisterCamp extends React.Component {
   }
 }
 
-export default createContainer(() => {
-  const totalStudents = Students.find().fetch().length;
+export default createContainer((props) => {
+  const province = props.province;
+  const students = Students.find().fetch();
+  const filterByProvince = (province, student) => {
+    const isEqualProvince = student.province === province;
+    if( isEqualProvince ) {
+      return student;
+    }
+  };
+  const filterNotUndefined = (student) => student !== undefined
+  const filteredStudent = students.map((student) => {
+    return filterByProvince(province, student);
+  }).filter(filterNotUndefined);
+  const totalStudents = filteredStudent.length;  
   return {
     totalStudents,
   }
