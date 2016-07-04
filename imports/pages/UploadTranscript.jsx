@@ -1,11 +1,13 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { $ } from 'meteor/jquery';
+
 // upload
 import Dropzone from 'react-dropzone';
 
 // Collection
 import { Students } from '../api/Students.js';
+
 
 export default class UploadTranscript extends React.Component {
   constructor(props) {
@@ -47,8 +49,16 @@ export default class UploadTranscript extends React.Component {
     const date = this.refs.dateForTranfer.value;
     const time = this.refs.timeForTranfer.value;
     const amount = this.refs.amount.value;
+    const slip = this.state.files[0];
+    const previewFile = (file) => {
+      var reader  = new FileReader();
+      reader.onloadend = function () {
+        console.log(reader.result); //this is an ArrayBuffer
+      }
+        reader.readAsArrayBuffer(file);
+    }
 
-
+    previewFile(slip);
 
     if(tb_id) {
       return this.props.items.map((item) => {
@@ -62,7 +72,7 @@ export default class UploadTranscript extends React.Component {
                 'date': date,
                 'time': time,
                 'amount': amount,
-                'slip': this.state.files[0].preview,
+                'slip': this.state.files[0].name,
               }
             }
           )
@@ -70,10 +80,6 @@ export default class UploadTranscript extends React.Component {
         }
       });
     }
-    else if(!tb_id) {
-
-    }
-
 
   }
 
@@ -130,7 +136,7 @@ export default class UploadTranscript extends React.Component {
             </div>
             <div className="input-field upload-slip col s12 l12">
               {this.state.files.length > 0 ? <div>
-                <div>{this.state.files.map((file) => <img src={file.preview} /> )}</div>
+                <div>{this.state.files.map((file) => <img key={file.name} src={file.preview} /> )}</div>
                 </div> :
                 <Dropzone
                   onDrop={this.onDrop}
