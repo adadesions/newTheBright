@@ -53,11 +53,16 @@ export default class UploadTranscript extends React.Component {
       return this.props.items.map((item) => {
         if(item.tb_id === tb_id) {
           Students.update(
-            { "_id" : item._id },
-            { $set: { "optionPayment": optionPayment,
-                      "date": date,
-                      "time": time,
-                      "amount": amount}
+            { '_id' : item._id },
+            {
+              $set:
+              {
+               'optionPayment': optionPayment,
+                'date': date,
+                'time': time,
+                'amount': amount,
+                'slip': this.state.files[0].preview,
+              }
             }
           )
           FlowRouter.go('main');
@@ -124,8 +129,10 @@ export default class UploadTranscript extends React.Component {
             <div className="input-field upload-slip col s12 l12">
               {this.state.files.length > 0 ? <div>
                 <div>{this.state.files.map((file) => <img src={file.preview} /> )}</div>
-                </div> : <Dropzone onDrop={this.onDrop}
-                                   config={this.componentConfig}>
+                </div> :
+                <Dropzone
+                  onDrop={this.onDrop}
+                  config={this.componentConfig}>
                   <div><span>วางรูป หรือ คลิ๊กที่นี้ เพื่ออัพโหลดสลิป</span></div>
                 </Dropzone>
               }

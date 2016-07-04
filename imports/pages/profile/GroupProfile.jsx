@@ -27,6 +27,7 @@ export default class GroupProfile extends React.Component {
     return(
       <div className="ind-profile">
         { this.renderListStudent(this.props.student) }
+        <img src={this.props.slip} />
       </div>
     )
   }
@@ -39,7 +40,9 @@ GroupProfile.propsTypes = {
 export default createContainer((props) => {
   const params = props.tb_id;
   let student = Students.findOne({'tb_id': params});
+  let slip = student ? student.slip : "";
   return {
     student,
+    slip
   };
 }, GroupProfile);

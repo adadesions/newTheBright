@@ -26,7 +26,7 @@ export default class IndividualProfile extends React.Component {
   render() {
     return(
       <div className="ind-profile">
-        { this.renderListStudent(this.props.student) }
+        { this.renderListStudent(this.props.student) }        
       </div>
     )
   }
