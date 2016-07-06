@@ -37,15 +37,15 @@ export default class LandingPage extends React.Component {
         <div className="slide-landing parallax-container">
           <div className="parallax"><img src="/images/mainpage/bg-pl.jpg"/></div>
           <div className="row section-slide">
-            <div className="col s0 l1 icon-previous"><img src="/images/mainpage/slide/previous.png"/></div>
-            <div className="col s12 l10 slide-container">
+            <div className="col s12 l12 slide-container">
               <div className="slider">
+                <img id="icon-previous" src="/images/mainpage/slide/previous.png"/>
+                <img id="icon-next" src="/images/mainpage/slide/next.png"/>
                 <ul className="slides">
                   <ItemImgSlide />
                 </ul>
               </div>
             </div>
-            <div className="col s0 l1 icon-next"><img src="/images/mainpage/slide/next.png"/></div>
           </div>
         </div>
         <div className="col s12 l12 section-poster">
