@@ -24,3 +24,5 @@ poetic:materialize-scss
 kadira:flow-router
 fourseven:scss
 fortawesome:fontawesome
+cfs:standard-packages
+cfs:gridfs

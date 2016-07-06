@@ -162,7 +162,7 @@ export default class MenuNavigator extends React.Component {
         </ul>
         <ul id="register-list" className="dropdown-content">
           <li onClick={this.onClickRegister}><a href="">ขั้นตอนการสมัคร</a></li>
-          <li onClick={this.onClickUploadTranscript}><a href="">แจ้งการชำระเงิน</a></li>
+          {/*<li onClick={this.onClickUploadTranscript}><a href="">แจ้งการชำระเงิน</a></li>*/}
           <li onClick={this.onClickCheck}><a href="">ตรวจสอบรายชื่อ</a></li>
           <li><a href="http://thebright.in.th/pdf/pay.pdf">ดาวน์โหลดใบชำระเงิน</a></li>
         </ul>
