@@ -332,49 +332,48 @@ html
 // Mainpage
 .mainpage
   .section-slide
-    padding-top: 14em !important
+    padding-top: 11.6em !important
     padding-top: 0.1em
-    padding-bottom: 1em
     display: flex
     justify-content: center
+    .col
+      padding: 0
+    .slides
+      height: 100% !important
+      background-color: #fff
     .slider
-      background: rgba(255,255,255,0.6)
+      background: rgba(255,255,255,1)
       margin-top: 0.5%
-      height: 32em !important
-      border-radius: 1em
-      ul
-        border-radius: 1em
-      li.list-img-slide
-        -webkit-border-top-left-radius: 1em
-        -webkit-border-top-right-radius: 1em
-        -moz-border-radius-topleft: 1em
-        -moz-border-radius-topright: 1em
-        border-top-left-radius: 1em
-        border-top-right-radius: 1em
+      img#icon-next
+        right: 0
+        top: 35%
+        position: absolute
+        z-index: 999
+        opacity: 0.2
+        cursor: pointer
+      img#icon-next:hover
+        right: 0
+        top: 35%
+        position: absolute
+        z-index: 999
+        opacity: 0.5
+      img#icon-previous
+        left: 0
+        top: 35%
+        position: absolute
+        z-index: 999
+        opacity: 0.2
+        cursor: pointer
+      img#icon-previous:hover
+        right: 0
+        top: 35%
+        position: absolute
+        z-index: 999
+        opacity: 0.5
     .indicators
       bottom: 5%
       li
         background: #fff
-    .icon-next
-      display: flex
-      align-items: center
-      justify-content: center
-      height: 32em !important
-      cursor: pointer
-      img
-        width: 6.4em
-        height: auto
-        opacity: 0.5
-    .icon-previous
-      display: flex
-      align-items: center
-      justify-content: center
-      height: 32em !important
-      cursor: pointer
-      img
-        width: 6.4em
-        height: auto
-        opacity: 0.5
   .row.section-promote-course
     margin-bottom: 0 !important
   .slide-and-promote.parallax-container
