@@ -17,18 +17,19 @@ html
   top: 0
   z-index: 999
   transition: height 0.4s
+  overflow: hidden
   .logo
     height: 12em
   .top-nav-landing
     display: flex
     justify-content: space-between
     padding-left: 8% !important
-    padding-right: 4% !important
+    padding-right: 8% !important
     height: 65% !important
     img
       margin-top: 3.5% !important
     img.nav-brochrue-landing
-      margin-top: -12.5% !important
+      margin-top: 6% !important
   .top-nav
     padding-left: 6%
     padding-right: 6%
@@ -49,7 +50,7 @@ html
     height: auto
     transition: width 0.5s
   .nav-brochrue-landing
-    width: 25em
+    width: 20em
     height: auto
     transition: width 0.5s
 .menu-navigator
@@ -91,18 +92,19 @@ html
   top: 0
   z-index: 999
   transition: height 0.4s
+  overflow: hidden
   .logo
     height: 12em !important
   .top-nav-landing
     display: flex
     justify-content: space-between
-    padding-left: 8% !important
-    padding-right: 4% !important
+    padding-left: 15% !important
+    padding-right: 16% !important
     height: 65% !important
     img
       margin-top: 1.5% !important
     img.nav-brochrue-landing
-      margin-top: -12.5% !important
+      margin-top: 4% !important
   .top-nav
     padding-left: 8% !important
     padding-right: 8% !important
@@ -124,7 +126,7 @@ html
     height: auto !important
     transition: width 0.5s
   .nav-brochrue-landing
-    width: 13.7em !important
+    width: 11em !important
     height: auto !important
     transition: width 0.5s
 .menu-navigator-component-on-scroll
@@ -146,18 +148,34 @@ html
         font-size: 14px !important
       a#whyTheBright
         width: 14em
+.btn-go
+  img
+    width: 17rem !important
+    height: auto !important
 // Footer
 .footer
-  background: url('/images/footer/footer-bg.jpg')
+  background: url('/images/navigator/bg.png')
   background-size: cover
-  height: 12em
+  height: 4.5rem
   display: flex
   align-items: center
-  padding-left: 8%
-  padding-right: 8%
-  img
-    width: 20em
-    height: auto
+  justify-content: space-between
+  padding-left: 2rem
+  padding-right: 2rem
+  color: #fff
+  font-size: 16px
+  .menu-navigator
+    background-color: inherit
+  .desktop-list
+    margin-top: -0.3rem !important
+    li
+      a
+       color: #fff
+       font-size: 16px !important
+  ul#course-list.dropdown-content
+    top: -10.3em !important
+  ul#register-list.dropdown-content
+    top: -13.6em !important
 
 // Landing page
 .landing-page
@@ -540,7 +558,7 @@ html
 .head-admin
   padding-left: 2rem
   padding-right: 2rem
-  width: 170%
+  width: 100%
   display: flex
   justify-content: space-between
 .menu-admin
@@ -593,7 +611,10 @@ html
   padding: 1rem !important
 i.approve-icon
   color: #8bc34a
-
+.student-item
+  img
+    width: 20rem
+    height: auto
 // Profile
 .ind-profile
   padding-top: 13rem
@@ -606,6 +627,9 @@ i.approve-icon
   border-radius: 0.5rem
   padding: 1rem
   background-color: rgba(255,255,255,0.8)
+  img
+    width: 60%
+    height: 30%
   hr.line-header
     margin-left: 6.5rem
     margin-right: 6.5rem
@@ -631,6 +655,9 @@ i.approve-icon
   border-radius: 0.5rem
   padding: 1rem
   background-color: rgba(255,255,255,0.8)
+  img
+    width: 60%
+    height: 30%
   hr.line-header
     margin-left: 6.5rem
     margin-right: 6.5rem
@@ -1220,7 +1247,7 @@ $breakpoint-desktop: 1680px
     background-size: cover
   // Footer
   .footer
-    background: url('/images/footer/footer-bg.jpg')
+    background: url('/images/navigator/bg.png')
     background-size: cover
     height: 18em
     display: flex
@@ -1327,6 +1354,7 @@ $breakpoint-desktop: 1680px
     padding-bottom: 5%
   .ind-profile-detail
     width: 60%
+
     h3
       font-size: 60px
     h5

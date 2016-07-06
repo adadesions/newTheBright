@@ -62,6 +62,7 @@ export default class StudentItems extends React.Component {
           <div>วันที่จ่าย : {this.props.names.date}</div>
           <div>เวลาที่จ่าย : {this.props.names.time}</div>
           <div>จำนวนเงิน : {this.props.names.amount}</div>
+          <div><img src={this.props.names.slip}/></div>
         </div>
       </li>
     )

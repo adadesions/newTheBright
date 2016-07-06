@@ -78,12 +78,6 @@ export default class UploadTranscript extends React.Component {
   }
 
   onDrop(files) {
-      files.map((file) => {
-        const name = file.name;
-        console.log('Received files: ', file);
-
-      })
-
       this.setState({
         files: files
       });
