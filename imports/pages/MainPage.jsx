@@ -21,14 +21,6 @@ export default class MainPage extends React.Component {
       }, 800);
 
     });
-
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
   }
 
   getItemPoster() {
@@ -83,19 +75,6 @@ export default class MainPage extends React.Component {
           <div className="row section-menu-other parallax-container">
             <div className="parallax"><img src="/images/mainpage/bg-pl2.jpg"/></div>
             <MenuOther />
-          </div>
-          <div className="row social-contact">
-            <div className="col l7 page-box">
-              <BoxSocial />
-            </div>
-            <div className="col l5">
-              <ItemSocials />
-                <div className="contact-center">
-                  <h3>Contact Center</h3>
-                  <div><h5>Tel: 092-591-0006</h5></div>
-                  <div><h5>Email: thebright.icare@gmail.com</h5></div>
-                </div>
-            </div>
           </div>
         </div>
       </div>

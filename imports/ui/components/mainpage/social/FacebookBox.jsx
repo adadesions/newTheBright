@@ -13,8 +13,7 @@ export default class FacebookBox extends React.Component {
   render() {
     return(
       <div>
-        <div id="fb-root"></div>
-        <div className="fb-page z-depth-1" data-href="https://www.facebook.com/thebrightofficial" data-tabs="timeline" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thebrightofficial" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thebrightofficial">TheBright สถาบันกวดวิชาเดอะไบร์ท</a></blockquote></div>
+        <div id="fb-root"><div className="fb-page z-depth-1" data-href="https://www.facebook.com/thebrightofficial" data-tabs="timeline" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thebrightofficial" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thebrightofficial">TheBright สถาบันกวดวิชาเดอะไบร์ท</a></blockquote></div></div>
       </div>
     )
   }
