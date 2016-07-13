@@ -57,8 +57,8 @@ export default class DetailStudent extends React.Component {
         <div><h5>Status :</h5> <span>{this.renderStatus()}</span></div>
         <hr className="line-section"/>
         <div><h5>Checkin :</h5> <span></span></div>
-        <hr className="line-section"/>
-        <div><h5>slip :</h5> <img src={this.props.student.slip}/></div>
+        {/*<hr className="line-section"/>*/}
+        {/*<div><h5>slip :</h5> <img src={this.props.student.slip}/></div>*/}
       </div>
     )
   }

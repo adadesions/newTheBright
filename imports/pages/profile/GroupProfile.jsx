@@ -27,7 +27,6 @@ export default class GroupProfile extends React.Component {
     return(
       <div className="ind-profile">
         { this.renderListStudent(this.props.student) }
-        <img src={this.props.slip} />
       </div>
     )
   }

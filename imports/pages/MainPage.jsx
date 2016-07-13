@@ -7,6 +7,8 @@ import ItemPoster from '../ui/components/mainpage/ItemPoster.jsx';
 import MenuOther from '../ui/components/mainpage/MenuOther.jsx';
 import BoxSocial from '../ui/components/mainpage/BoxSocial.jsx';
 import ItemSocials from '../ui/components/mainpage/ItemSocials.jsx';
+import LearningSystem from '../ui/components/mainpage/LearningSystem.jsx';
+
 export default class MainPage extends React.Component {
 
   componentDidMount() {
@@ -68,6 +70,12 @@ export default class MainPage extends React.Component {
             <div className="row section-promote-course">
               {this.renderCard()}
             </div>
+          </div>
+          <div className="learning-system">
+            <div className="col s12 l12 head-menu-learning">
+              <a href=""><img src="/images/mainpage/learning-system/banner.jpg"/></a>
+            </div>
+            <LearningSystem />
           </div>
           <div className="col s12 l12 section-poster">
             {this.renderposter()}
