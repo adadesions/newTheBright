@@ -4,16 +4,21 @@
 @font-face
   font-family: Cloud-Light
   src: url('/fonts/Cloud-LightBold/Cloud-Light.otf') format("truetype")
+@font-face
+  font-family: Open-Sans
+  font-style: normal
+  font-weight: 400
+  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2')
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F
 html
   font-family: Cloud-Light
 .row.space
   margin-bottom: 0
 // Navigator
 .navigator-landing
-  position: fixed
   background: url('/images/navigator/bg.png') no-repeat fixed
   background-size: contain
-  height: 12em
+  height: 80px
   top: 0
   z-index: 999
   transition: height 0.4s
@@ -29,7 +34,7 @@ html
     img
       margin-top: 3.5% !important
     img.nav-brochrue-landing
-      margin-top: 6% !important
+      margin-top: 4% !important
   .top-nav
     padding-left: 6%
     padding-right: 6%
@@ -46,11 +51,11 @@ html
     height: auto
     transition: width 0.5s
   .nav-logo-landing
-    width: 25em
+    width: 11.7em
     height: auto
     transition: width 0.5s
   .nav-brochrue-landing
-    width: 20em
+    width: 10em
     height: auto
     transition: width 0.5s
 .navigator
@@ -139,7 +144,7 @@ html
 .navigator-on-scroll-landing
   position: fixed
   background-color: #82b1ff
-  height: 6em
+  height: 80px
   top: 0
   z-index: 999
   transition: height 0.4s
@@ -149,22 +154,22 @@ html
   .top-nav-landing
     display: flex
     justify-content: space-between
-    padding-left: 15% !important
-    padding-right: 16% !important
+    padding-left: 8% !important
+    padding-right: 8% !important
     height: 65% !important
     img
-      margin-top: 1.5% !important
+      margin-top: 3.5% !important
     img.nav-brochrue-landing
       margin-top: 4% !important
   .top-nav
-    padding-left: 8% !important
-    padding-right: 8% !important
+    padding-left: 10% !important
+    padding-right: 10% !important
     height: 65% !important
     img
       margin-top: 0.2% !important
   .bottom-nav
-    padding-left: 8% !important
-    padding-right: 8% !important
+    padding-left: 10% !important
+    padding-right: 10% !important
     background-color: #fff !important
     color: #000 !important
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important
@@ -173,11 +178,11 @@ html
     height: auto !important
     transition: width 0.5s
   .nav-logo-landing
-    width: 13.7em !important
+    width: 11.7em !important
     height: auto !important
     transition: width 0.5s
   .nav-brochrue-landing
-    width: 11em !important
+    width: 10em !important
     height: auto !important
     transition: width 0.5s
 .navigator-on-scroll
@@ -248,13 +253,14 @@ html
         width: 14em
 .btn-go
   img
-    width: 17rem !important
+    width: 11rem !important
     height: auto !important
+    padding-right: 1rem
 // Footer
 .footer
   background: url('/images/navigator/bg.png')
   background-size: cover
-  height: 4.5rem
+  height: 50px
   display: flex
   align-items: center
   justify-content: space-between
@@ -271,11 +277,18 @@ html
     margin-top: -0.3rem !important
     li
       a
-       font-size: 16px !important
+       font-size: 18px !important
+       height: 120% !important
   ul#course-list-footer.dropdown-content
     top: -10.3em !important
+    overflow: visible
+    a
+      font-size: 15px !important
   ul#register-list-footer.dropdown-content
     top: -13.6em !important
+    overflow: visible
+    a
+      font-size: 15px !important
 .footer-social
   .tab-facebook
     color: #3A579B !important
@@ -290,6 +303,7 @@ html
     color: #F21419 !important
     font-weight: bold
   .tabs
+    width: 107.2% !important
     .indicator
       background-color: #D02D90
   .social-contact
@@ -301,7 +315,7 @@ html
     .social-list-item
       display: flex
       width: 100%
-      padding-bottom: 1.5rem
+      padding-bottom: 2.2rem
     .social-img-item
       img
         width: auto
@@ -324,18 +338,19 @@ html
       a:hover
         color: #ec8800
   .contact-center
-    margin-top: 2rem
+    margin-top: 1.8rem
     h3
       font-weight: bold
-
+    img
+      width: 70%
+.page-box
+  padding-left: 3rem !important
 // Landing page
 .landing-page
   .row
     .col
       padding: 0rem !important
   .section-slide
-    padding-top: 11.6em !important
-    padding-top: 0.1em
     display: flex
     justify-content: center
     .slides
@@ -343,7 +358,6 @@ html
       background-color: #fff
     .slider
       background: rgba(255,255,255,1)
-      margin-top: 0.5%
       img#icon-next
         right: 0
         top: 35%
@@ -361,14 +375,14 @@ html
         left: 0
         top: 35%
         position: absolute
-        z-index: 999
+        z-index: 3
         opacity: 0.2
         cursor: pointer
       img#icon-previous:hover
         right: 0
         top: 35%
         position: absolute
-        z-index: 999
+        z-index: 3
         opacity: 0.5
     .indicators
       bottom: 5%
@@ -611,6 +625,9 @@ html
   padding-top: 12em
 .why-the-bright
   padding-top: 9em
+li.list-img-slide
+  img
+    background-size: 1286px 440px !important
 .smart-child
   .section-slide
     padding-top: 14em !important

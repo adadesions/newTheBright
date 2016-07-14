@@ -77,9 +77,7 @@ export default class Footer extends React.Component {
           <div className="col l5">
             <ItemSocials />
               <div className="contact-center">
-                <h3>Contact Center</h3>
-                <div><h5>Tel: 092-591-0006</h5></div>
-                <div><h5>Email: thebright.icare@gmail.com</h5></div>
+                <img src="/images/footer/contact.png"/>
               </div>
           </div>
         </div>
@@ -90,10 +88,10 @@ export default class Footer extends React.Component {
               <div className="nav-wrapper">
                 <a href="#" data-activates="mobile-list" className="button-collapse"><i className="fa fa-bars fa-5x" aria-hidden="true"></i></a>
                 <ul className="desktop-list">
-                  <li><a id="mainPage" onClick={this.onClickMainpage} href="">หน้าแรก</a></li>
-                  <li><a id="course" className="dropdown-button" href="" data-activates="course-list-footer">คอร์สเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
-                  <li><a id="register" className="dropdown-button" href="" data-activates="register-list-footer">สมัครเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
-                  <li onClick={this.onClickContact}><a id="contact" href="">ติดต่อเรา</a></li>
+                  <li><a id="mainPage-footer" onClick={this.onClickMainpage} href="">หน้าแรก</a></li>
+                  <li><a id="course-footer" className="dropdown-button" href="" data-activates="course-list-footer">คอร์สเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
+                  <li><a id="register-footer" className="dropdown-button" href="" data-activates="register-list-footer">สมัครเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
+                  <li onClick={this.onClickContact}><a id="contact-footer" href="">ติดต่อเรา</a></li>
                 </ul>
               </div>
             </nav>
