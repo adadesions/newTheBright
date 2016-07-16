@@ -8,6 +8,7 @@ import MenuOther from '../ui/components/mainpage/MenuOther.jsx';
 import BoxSocial from '../ui/components/mainpage/BoxSocial.jsx';
 import ItemSocials from '../ui/components/mainpage/ItemSocials.jsx';
 import LearningSystem from '../ui/components/mainpage/LearningSystem.jsx';
+import '../api/youtube.js';
 
 export default class MainPage extends React.Component {
 
@@ -22,6 +23,9 @@ export default class MainPage extends React.Component {
         scrollTop: 0
       }, 800);
 
+      $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
     });
   }
 
@@ -69,6 +73,27 @@ export default class MainPage extends React.Component {
             </div>
             <div className="row section-promote-course">
               {this.renderCard()}
+            </div>
+          </div>
+          <div className="chanel row">
+            <div className="col s12 l6 youtube-embed">
+              <h4>The Bright Chanel</h4>
+              <hr className="line-section"/>
+              <div className="video-container z-depth-1">
+                <iframe className="z-depth-1" src="" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div className="g-ytsubscribe" data-channelid="UCJQDdVxg_fFFY2HbzXUK4MA" data-layout="full" data-count="default"></div>
+            </div>
+            <div className="col s12 l6 topic">
+              <h4>บทความน่าสนใจ</h4>
+              <hr className="line-section"/>
+              <ul className="collapsible z-depth-1" data-collapsible="accordion">
+                <li>
+                  <div className="collapsible-header"><img src="/images/mainpage/test4.jpg"/>Comming Soon</div>
+                  <div className="collapsible-body"><p>Comming Soon</p></div>
+                </li>
+              </ul>
+              <a href="">Read More</a>
             </div>
           </div>
           <div className="learning-system">

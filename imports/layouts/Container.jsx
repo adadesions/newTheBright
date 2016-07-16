@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import Navigator from '../ui/components/navigator/Navigator.jsx';
+import GrayBar from '../ui/components/navigator/GrayBar.jsx';
 import Footer from '../ui/components/footer/Footer.jsx';
 
 export default class Container extends React.Component {

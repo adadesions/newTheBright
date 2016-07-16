@@ -58,11 +58,79 @@ html
     width: 10em
     height: auto
     transition: width 0.5s
+.gray-bar
+  background-color: #E2E2E2
+  height: 20%
+  line-height: 34px !important
+  display: flex
+  justify-content: flex-end
+  padding-left: 4%
+  padding-right: 4%
+  overflow: hidden
+  .text-red
+    color: red
+    font: -webkit-small-control
+    vertical-align: baseline
+    font-weight: bold
+  .black-text
+    font: -webkit-small-control
+    color: #323232
+    vertical-align: baseline
+    font-weight: bold
+  .icon-social
+    padding-left: 1rem
+    display: flex
+    flex-flow: row
+    i
+      height: 100%
+      color: #4F5052
+    li
+      display: flex
+      width: 2rem
+      justify-content: center
+    li:hover
+      background-color: #3B5998
+      i
+        color: #fff
+.gray-bar-on-scroll
+  background-color: #E2E2E2
+  height: 32%
+  line-height: 34px !important
+  display: flex
+  justify-content: flex-end
+  padding-left: 4%
+  padding-right: 4%
+  overflow: hidden
+  .text-red
+    color: red
+    font: -webkit-small-control
+    vertical-align: baseline
+    font-weight: bold
+  .black-text
+    font: -webkit-small-control
+    color: #323232
+    vertical-align: baseline
+    font-weight: bold
+  .icon-social
+    padding-left: 1rem
+    display: flex
+    flex-flow: row
+    i
+      height: 100%
+      color: #4F5052
+    li
+      display: flex
+      width: 2rem
+      justify-content: center
+    li:hover
+      background-color: #3B5998
+      i
+        color: #fff
 .navigator
   position: fixed
   background: url('/images/navigator/bg.png') no-repeat fixed
   background-size: contain
-  height: 19%
+  height: 23%
   top: 0
   z-index: 999
   transition: height 0.4s
@@ -81,7 +149,7 @@ html
   .top-nav
     padding-left: 6%
     padding-right: 6%
-    height: 75%
+    height: 58%
     img
       margin-top: 0.4%
   .bottom-nav
@@ -119,24 +187,50 @@ html
       color: #000
   ul
     // box-shadow: none
-    border-radius: 1em
+    border-radius: 0.2em
+  li:hover
+    background-color: inherit
+  a:hover
+    background-color: inherit
+    font-weight: bold
   li
     a
       color: #000
-      text-align: center
       font-size: 15px
       transition: fontsize 0.5s
-    a#whyTheBright
-      width: 12.5em
-    a#course
-      width: 14em
-    a#register
-      width: 12em
+  ul#why-the-bright-list
+    li
+      a
+        padding-left: 4rem
+  #why-the-bright-list
+    width: 100% !important
+    left: 0 !important
+  ul#team-the-bright-list
+    li
+      a
+        padding-left: 16rem
+  #team-the-bright-list
+    width: 100% !important
+    left: 0 !important
+  ul#course-list
+    li
+      a
+        padding-left: 27rem
+  #course-list
+    width: 100% !important
+    left: 0 !important
+  ul#register-list
+    li
+      a
+        padding-left: 37rem
+  #register-list
+    width: 100% !important
+    left: 0 !important
 .menu-navigator-component
   height: 4.3em
   transition: height 0.4s
   ul.dropdown-content
-    top: 2.5em !important
+    top: 2.2rem !important
     z-index: 999 !important
     li
       border: none
@@ -232,6 +326,22 @@ html
 .menu-navigator-component-on-scroll
   height: 2.5em !important
   transition: height 0.2s
+  ul#why-the-bright-list
+    li
+      a
+        padding-left: 4rem
+  ul#team-the-bright-list
+    li
+      a
+        padding-left: 20rem
+  ul#course-list
+    li
+      a
+        padding-left: 31rem
+  ul#register-list
+    li
+      a
+        padding-left: 40rem
   ul.dropdown-content
     top: 2.7em !important
     z-index: 999 !important
@@ -239,15 +349,11 @@ html
     height: 2.5em !important
     transition: height 0.2s
     i
-      line-height: 62px
+      line-height: 42px
     li
       height: 2.5em !important
       margin-right: 0.7em !important
       a
-        height: 3em !important
-        display: flex !important
-        align-items: center !important
-        justify-content: center !important
         font-size: 14px !important
       a#whyTheBright
         width: 14em
@@ -272,23 +378,26 @@ html
     background-color: inherit
     .nav-wrapper
       i
-        line-height: 64px
-  .desktop-list
+        line-height: 52px
+  ul.desktop-list
     margin-top: -0.3rem !important
     li
       a
        font-size: 18px !important
-       height: 120% !important
+       line-height: 50px
+       height: 100% !important
   ul#course-list-footer.dropdown-content
     top: -10.3em !important
     overflow: visible
     a
       font-size: 15px !important
+      line-height: 1rem
   ul#register-list-footer.dropdown-content
     top: -13.6em !important
     overflow: visible
     a
       font-size: 15px !important
+      line-height: 1.2rem
 .footer-social
   .tab-facebook
     color: #3A579B !important
@@ -303,7 +412,7 @@ html
     color: #F21419 !important
     font-weight: bold
   .tabs
-    width: 107.2% !important
+    width: 100% !important
     .indicator
       background-color: #D02D90
   .social-contact
@@ -512,32 +621,74 @@ html
         right: 0
         top: 35%
         position: absolute
-        z-index: 999
+        z-index: 3
         opacity: 0.2
         cursor: pointer
       img#icon-next:hover
         right: 0
         top: 35%
         position: absolute
-        z-index: 999
+        z-index: 3
         opacity: 0.5
       img#icon-previous
         left: 0
         top: 35%
         position: absolute
-        z-index: 999
+        z-index: 3
         opacity: 0.2
         cursor: pointer
       img#icon-previous:hover
         right: 0
         top: 35%
         position: absolute
-        z-index: 999
+        z-index: 3
         opacity: 0.5
     .indicators
       bottom: 5%
       li
         background: #fff
+  .chanel.row
+    margin-bottom: 0
+  .chanel
+    padding: 2rem
+    background-color: #5A8999
+    color: #fff
+    font-weight: bold
+    .collapsible-header
+      display: flex
+      justify-content: flex-start
+      min-height: 5rem
+      line-height: 5rem
+      padding: 0
+      color: #000
+      i
+        line-height: 5rem
+      img
+        width: 75px
+        height: 75px
+        margin-right: 1rem
+    .collapsible-body
+      background: #fff
+      color: #323232
+    .topic
+      a
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        color: #fff
+        font-size: 20px
+      a:hover
+        font-weight: bold
+        color: #ff9900
+    hr.line-section
+      background-color: #f1f1f1
+      opacity: 0.5
+      margin-bottom: 2rem
+  .video-container
+    width: 100%
+    padding-bottom: 30rem
+    iframe
+      border: none !important
   .row.section-promote-course
     margin-bottom: 0 !important
   .slide-and-promote.parallax-container
@@ -622,9 +773,9 @@ html
     background: rgba(245,245,245,0.8)
 // Why the bright
 .know-the-bright
-  padding-top: 12em
+  padding-top: 8.8em
 .why-the-bright
-  padding-top: 9em
+  padding-top: 5.5em
 li.list-img-slide
   img
     background-size: 1286px 440px !important
@@ -650,6 +801,8 @@ li.list-img-slide
         border-top-left-radius: 1em
         border-top-right-radius: 1em
         height: 52em !important
+        img
+          background-size: 1050px 780px !important
     .indicators
       bottom: 2%
       li
@@ -680,7 +833,7 @@ li.list-img-slide
 
 //  Team the bright
 .the-best-tutors
-  padding-top: 10em
+  padding-top: 8em
 
 // Course
 .items-course
@@ -1127,7 +1280,8 @@ $breakpoint-desktop: 1680px
       font-size: 48px !important
       color: #ffa449 !important
 
-
+  .gray-bar
+    display: none
   //Admin
   .container-login
     display: flex
@@ -1160,9 +1314,8 @@ $breakpoint-desktop: 1680px
   i.approve-icon
     color: #8bc34a
   .navigator
-    position: fixed
     background: url('/images/navigator/bg.png') no-repeat fixed
-    background-size: cover
+    background-size: contain
     height: 12em
     top: 0
     z-index: 999
@@ -1196,7 +1349,7 @@ $breakpoint-desktop: 1680px
       justify-content: flex-end
       flex-flow: row-reverse
     .button-collapse
-      height: 12em
+      height: 14.5em
       display: flex
       align-items: center
       i
@@ -1262,7 +1415,7 @@ $breakpoint-desktop: 1680px
   .navigator-on-scroll
     position: fixed !important
     background: url('/images/navigator/bg.png') no-repeat fixed !important
-    background-size: cover !important
+    background-size: contain !important
     height: 12em !important
     top: 0 !important
     z-index: 999 !important
@@ -1355,12 +1508,37 @@ $breakpoint-desktop: 1680px
   .section-menu-other
     background: url('/images/mainpage/bg-pl2.jpg')
     background-size: cover
+  .page-box
+    padding-left: 0 !important
+  .footer-social
+    .tabs
+      width: 100% !important
   .mainpage
     background: url('/images/mainpage/bg-pl.jpg')
     background-size: cover
+    .col.s6.item-menu-other
+      width: 50% !important
+    .col.item-menu-other
+      padding: 4rem
+    .menu-learning
+      padding: 1rem
+      border: 2px solid #f5f5f5
+      cursor: pointer
+      background: rgba(245,245,245,0.6)
+      border-radius: 0.2rem
+      span
+        display: flex
+        justify-content: center
+        font-size: 24px
+        font-weight: bold
+        padding: 1rem
+      a
+        display: flex
+        justify-content: center
+    .menu-learning:hover
+      border: 2px solid #c4c4c4
+      background: rgba(245,245,245,0.6)
     .section-slide
-      padding-top: 0.1em
-      padding-bottom: 1em
       display: flex
       justify-content: center
       .slide-container
@@ -1446,18 +1624,28 @@ $breakpoint-desktop: 1680px
     align-items: center
     background: url('/images/mainpage/bg-pl.jpg')
     background-size: cover
+
+    padding: 1rem !important
+    img
+      width: 60%
+      height: 100%
+
   // Footer
   .footer
     background: url('/images/navigator/bg.png')
     background-size: cover
-    height: 18em
+    height: 8em
     display: flex
     align-items: center
     padding-left: 8%
     padding-right: 8%
+    span
+      font-size: 30px
+      font-weight: bold
     img
       width: 25em
       height: auto
+
   // Register page
   .register-page
     .head-form

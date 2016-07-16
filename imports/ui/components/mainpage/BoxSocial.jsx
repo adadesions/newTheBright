@@ -58,7 +58,7 @@ export default class BoxSocial extends React.Component {
 
   render() {
     return(
-      <div className="col l9 z-depth-1">
+      <div className="col s10 l9 z-depth-1">
         <ul className="tabs">
           <li className="tab col s3"><a onClick={this.onClickTabs} className="tab-facebook active" href="">Facebook</a></li>
           <li className="tab col s3"><a onClick={this.onClickTabs} className="tab-twitter" href="">Twitter</a></li>

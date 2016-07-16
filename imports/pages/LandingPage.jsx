@@ -54,8 +54,8 @@ export default class LandingPage extends React.Component {
         <div className="col s12 l12 section-welcome parallax-container">
           <div className="parallax"><img src="/images/landing/bg-pl3.png"/></div>
           <div className="row">
-            <div className="col s12 l5 text-column-left"></div>
-            <div className="col s12 l7 text-column-right"><a className="btn-go" onClick={this.onClickGoMainpage} href=""><LandingButton /></a><img src="/images/landing/side_go_btn.png"/></div>
+            <div className="col s5 l5 text-column-left"></div>
+            <div className="col s7 l7 text-column-right"><a className="btn-go" onClick={this.onClickGoMainpage} href=""><LandingButton /></a><img src="/images/landing/side_go_btn.png"/></div>
           </div>
         </div>
       </div>

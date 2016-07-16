@@ -69,12 +69,12 @@ export default class Footer extends React.Component {
 
   render() {
     return(
-      <div className="footer-social">
+      <div className="footer-social z-depth-1">
         <div className="row social-contact">
-          <div className="col l7 page-box">
+          <div className="col s6 l7 page-box">
             <BoxSocial />
           </div>
-          <div className="col l5">
+          <div className="col s6 l5">
             <ItemSocials />
               <div className="contact-center">
                 <img src="/images/footer/contact.png"/>
@@ -86,7 +86,7 @@ export default class Footer extends React.Component {
           <div className="menu-navigator-component">
             <nav className="menu-navigator">
               <div className="nav-wrapper">
-                <a href="#" data-activates="mobile-list" className="button-collapse"><i className="fa fa-bars fa-5x" aria-hidden="true"></i></a>
+                {/*<a href="#" data-activates="mobile-list" className="button-collapse"><i className="fa fa-bars fa-5x" aria-hidden="true"></i></a>*/}
                 <ul className="desktop-list">
                   <li><a id="mainPage-footer" onClick={this.onClickMainpage} href="">หน้าแรก</a></li>
                   <li><a id="course-footer" className="dropdown-button" href="" data-activates="course-list-footer">คอร์สเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
