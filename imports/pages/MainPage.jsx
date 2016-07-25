@@ -80,7 +80,7 @@ export default class MainPage extends React.Component {
               <h4>The Bright Chanel</h4>
               <hr className="line-section"/>
               <div className="video-container z-depth-1">
-                <iframe className="z-depth-1" src="" frameborder="0" allowfullscreen></iframe>
+                <iframe className="z-depth-1" src="https://www.youtube.com/embed/IP6KOMHvn7U" frameborder="0" allowfullscreen></iframe>
               </div>
               <div className="g-ytsubscribe" data-channelid="UCJQDdVxg_fFFY2HbzXUK4MA" data-layout="full" data-count="default"></div>
             </div>
@@ -89,8 +89,16 @@ export default class MainPage extends React.Component {
               <hr className="line-section"/>
               <ul className="collapsible z-depth-1" data-collapsible="accordion">
                 <li>
-                  <div className="collapsible-header"><img src="/images/mainpage/test4.jpg"/>Comming Soon</div>
-                  <div className="collapsible-body"><p>Comming Soon</p></div>
+                  <div className="collapsible-header"><img src="/images/mainpage/test4.jpg"/>Topic 1</div>
+                  <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                  <div className="collapsible-header"><img src="/images/mainpage/test5.jpg"/>Topic 2</div>
+                  <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                </li>
+                <li>
+                  <div className="collapsible-header"><img src="/images/mainpage/test6.jpg"/>Topic 3</div>
+                  <div className="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                 </li>
               </ul>
               <a href="">Read More</a>
