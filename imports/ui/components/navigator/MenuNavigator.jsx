@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component
 export default class MenuNavigator extends React.Component {
 
   componentDidMount() {
@@ -11,6 +12,7 @@ export default class MenuNavigator extends React.Component {
       });
 
       $(".dropdown-button").dropdown();
+
     });
 
   }
@@ -57,6 +59,55 @@ export default class MenuNavigator extends React.Component {
     });
   }
 
+  onClickTutors() {
+    FlowRouter.go('thebesttutors');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickGallery() {
+    FlowRouter.go('gallery');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickContact() {
+    FlowRouter.go('contact');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickCourseM4() {
+    FlowRouter.go('coursem4');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickCourseM5() {
+    FlowRouter.go('coursem5');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickCourseCoachMe() {
+    FlowRouter.go('coursecoachme');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
+  onClickCheck() {
+    FlowRouter.go('search');
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav('hide');
+    });
+  }
+
   render() {
     return(
       <div className="menu-navigator-component">
@@ -69,28 +120,29 @@ export default class MenuNavigator extends React.Component {
               <li><a id="teamTheBright" className="dropdown-button" href="" data-activates="team-the-bright-list">ทีมเดอะไบร์ท<i className="material-icons right">arrow_drop_down</i></a></li>
               <li><a id="course" className="dropdown-button" href="" data-activates="course-list">คอร์สเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
               <li><a id="register" className="dropdown-button" href="" data-activates="register-list">สมัครเรียน<i className="material-icons right">arrow_drop_down</i></a></li>
-              <li><a id="gallery" href="">ภาพประทับใจ</a></li>
-              <li><a id="contact" href="">ติดต่อเรา</a></li>
+              <li onClick={this.onClickGallery}><a id="gallery" href="">ภาพประทับใจ</a></li>
+              <li onClick={this.onClickContact}><a id="contact" href="">ติดต่อเรา</a></li>
             </ul>
             <ul className="side-nav" id="mobile-list">
               <li><a id="mainPage" className="button-left" onClick={this.onClickMainpage} href="">หน้าแรก</a></li>
               <li><a id="whyTheBright" className="button-left" href="">Why TheBright</a></li>
-                <li><a className="button-right" href="">รู้จักเดอะไบร์ท</a></li>
-                <li><a className="button-right" href="">ทำไมต้องเดอะไบร์ท</a></li>
-                <li><a className="button-right" href="">ทำเนียบเด็กเก่ง</a></li>
+                <li onClick={this.onClickKnow}><a className="button-right" href="">รู้จักเดอะไบร์ท</a></li>
+                <li onClick={this.onClickWhy}><a className="button-right" href="">ทำไมต้องเดอะไบร์ท</a></li>
+                <li onClick={this.onClickSmartChild}><a className="button-right" href="">ทำเนียบเด็กเก่ง</a></li>
               <li><a id="teamTheBright" className="button-left" href="">ทีมเดอะไบร์ท</a></li>
-                <li><a className="button-right" href="">สุดยอดติวเตอร์</a></li>
+                <li onClick={this.onClickTutors}><a className="button-right" href="">สุดยอดติวเตอร์</a></li>
                 <li><a className="button-right" href="">เดอะไบร์ททีม</a></li>
               <li><a id="course" className="button-left" href="">คอร์สเรียน</a></li>
-                <li><a className="button-right" href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
-                <li><a className="button-right" href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
-                <li><a className="button-right" href="">Coach Me Program</a></li>
+                <li onClick={this.onClickCourseM4} className="list-course"><a id="m4" className="button-right" href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
+                <li onClick={this.onClickCourseM5} className="list-course"><a id="m5" className="button-right" href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
+                <li onClick={this.onClickCourseCoachMe} className="list-course"><a id="m6" className="button-right" href="">Coach Me Program</a></li>
               <li><a id="register" className="button-left" href="">สมัครเรียน</a></li>
                 <li onClick={this.onClickRegister}><a className="button-right" href="">ขั้นตอนการสมัคร</a></li>
                 <li onClick={this.onClickUploadTranscript}><a className="button-right" href="">แจ้งการชำระเงิน</a></li>
-                <li><a className="button-right" href="">ดาวน์โหลดใบชำระเงิน</a></li>
-              <li><a id="gallery" className="button-left" href="">ภาพประทับใจ</a></li>
-              <li><a id="contact" className="button-left" href="">ติดต่อเรา</a></li>
+                <li onClick={this.onClickCheck}><a className="button-right" href="">ตรวจสอบรายชื่อ</a></li>
+                <li><a className="button-right" href="http://thebright.in.th/pdf/pay.pdf">ดาวน์โหลดใบชำระเงิน</a></li>
+              <li onClick={this.onClickGallery}><a id="gallery" className="button-left" href="">ภาพประทับใจ</a></li>
+              <li onClick={this.onClickContact}><a id="contact" className="button-left" href="">ติดต่อเรา</a></li>
             </ul>
           </div>
         </nav>
@@ -100,18 +152,19 @@ export default class MenuNavigator extends React.Component {
           <li onClick={this.onClickSmartChild}><a href="">ทำเนียบเด็กเก่ง</a></li>
         </ul>
         <ul id="team-the-bright-list" className="dropdown-content">
-          <li><a href="">สุดยอดติวเตอร์</a></li>
+          <li onClick={this.onClickTutors}><a href="">สุดยอดติวเตอร์</a></li>
           <li><a href="">เดอะไบร์ททีม</a></li>
         </ul>
         <ul id="course-list" className="dropdown-content">
-          <li><a href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
-          <li><a href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
-          <li><a href="">Coach Me Program</a></li>
+          <li onClick={this.onClickCourseM4} className="list-course"><a id="m4" href="">ค่าย ติว ติด ชัวร์ ตุลา 59</a></li>
+          <li onClick={this.onClickCourseM5} className="list-course"><a id="m5" href="">เดอะไบร์ท ติว ติด มันส์ 59</a></li>
+          <li onClick={this.onClickCourseCoachMe} className="list-course"><a id="m6" href="">Coach Me Program</a></li>
         </ul>
         <ul id="register-list" className="dropdown-content">
           <li onClick={this.onClickRegister}><a href="">ขั้นตอนการสมัคร</a></li>
-          <li onClick={this.onClickUploadTranscript}><a href="">แจ้งการชำระเงิน</a></li>
-          <li><a href="">ดาวน์โหลดใบชำระเงิน</a></li>
+          {/*<li onClick={this.onClickUploadTranscript}><a href="">แจ้งการชำระเงิน</a></li>*/}
+          <li onClick={this.onClickCheck}><a href="">ตรวจสอบรายชื่อ</a></li>
+          <li><a href="http://thebright.in.th/pdf/pay.pdf">ดาวน์โหลดใบชำระเงิน</a></li>
         </ul>
       </div>
     )

@@ -4,13 +4,13 @@ export default class NavigatorLanding extends React.Component {
 
   componentDidMount() {
     $(document).scroll(function(){
-      $('.navigator').addClass('navigator-on-scroll');
+      $('.navigator-landing').addClass('navigator-on-scroll-landing');
       $('.menu-navigator-component').addClass('menu-navigator-component-on-scroll');
     });
 
     $(document).scroll(function() {
       if ($(this).scrollTop() === 0) { // this refers to window
-        $('.navigator').removeClass('navigator-on-scroll');
+        $('.navigator-landing').removeClass('navigator-on-scroll-landing');
         $('.menu-navigator-component').removeClass('menu-navigator-component-on-scroll');
       }
     });
@@ -18,7 +18,7 @@ export default class NavigatorLanding extends React.Component {
 
   render() {
     return(
-      <nav className="navigator">
+      <nav className="navigator-landing">
         <div className="top-nav-landing">
           <a className="logo" href="/"><img className="nav-logo-landing" src="/images/navigator/logo.png"/></a>
           <div>

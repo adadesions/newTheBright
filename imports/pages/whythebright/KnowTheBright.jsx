@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Component
-import ItemPoster from '../ui/components/mainpage/ItemPoster.jsx';
+import ItemPoster from '../../ui/components/mainpage/ItemPoster.jsx';
 export default class KnowTheBright extends React.Component {
 
   getItemPoster() {
